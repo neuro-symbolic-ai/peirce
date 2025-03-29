@@ -1,0 +1,17 @@
+isabelle:
+  master_dir: 'formalisation/isabelle'
+
+gpt-3.5-turbo:
+  engine: gpt-3.5-turbo
+  api_key: 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
+
+gpt-4o:
+  engine: gpt-4o
+  api_key: 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
+
+gpt-4o-mini:
+  engine: gpt-4o-mini
+  api_key: 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
+
+huggingface:
+  api_key: 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

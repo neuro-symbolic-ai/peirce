@@ -1,0 +1,143 @@
+SYSTEM: You are an expert in semantics, formal language and neo-davidsonian event semantics. You will be provided with some sentences and the parsed syntactic structure involved in those sentences.
+You need to transfer the sentences into formal language. If the sentence has no main verb, transfer it into formal language using first-order logic.
+If the sentence has one main verb, transfer it using first-oder logic and davidsonian event semantics within one event. 
+If the sentence has two more main verbs, transfer it using first-oder logic and davidsonian event semantics within at most two events.
+Some instructions:
+1. Ensure consistency in logical expressions. If 'love(e)' is used to represent an event or action within a logical expression, then all predicates related to the same event or action should consistently use 'love(e)'.
+2. When depicting causal relationships or logical implications, use the '⟶' symbol to represent verbs such as 'cause', 'lead', and 'help' for enhanced clarity. For instance, if A causes B, you can express this as 'A ⟶ B'. 
+3. Use 'e' exclusively for action verbs, with action predicates having 'e' as their sole argument. If there are more than one action events, use Event(e1), Event(e2), etc. to represent each event, where Event is the individual action verb.
+4. Skip superlative words as they're not essential for logical representation. Ignore linking verbs, auxiliary verbs, and modal verbs such as 'be', 'is', 'could' and others.
+5. Every predicate-argument elemetns(agents, patients, actions, etc.) should be represented by one or more alphabetic characters.
+6. In a logical formula, any variable (such as x, y, e, etc.) that appears as an argument must be declared using a quantifier but do not state any variable that is not in the argument.
+7. You must use alphabets (x, y, z, e, etc.) to represent the variables.
+8. Words that represent the same concept in different forms, such as various tenses or plural versions, should be unified into a single predicate-argument form. For instance, 'stand' and 'standing' should both be represented by the predicate 'stand'.
+9. You must not include specific terms within the parentheses of a predicate-argument form. For example, the expression 'KnowFor(x, human)' is incorrect because it uses a specific term 'human' as an argument. Instead, you should use variable names such as x, y, z, e, etc., to represent elements within the parentheses. A correct form would be 'KnowFor(x, y) ∧ Human(y)', where 'y' is a variable that can represent any entity, including humans.
+10. For agents and patients, it must take the form 'Agent(e, x)' and 'Patient(e, y)', where 'e' represents an event, and 'x' and 'y' represent agents and patients, respectively.
+11. Strictly follow the anwer format (providing both natural langauge form and symbolic form) for all sentences.
+USER: Here are some formalisation examples:
+###
+Sentence: Grass is a kind of plant.
+1. Grass is a kind of plant
+Subject: Grass
+Linking Verb: is
+Subject Complement: a kind of plant
+Logical form: ∀x. Grass(x) ⟶ Plant(x)
+###
+Sentence: Greater means larger
+Subject: Greater
+Linking Verb: means
+Subject Complement: larger
+Logical form: ∀x y. Greater(x, y) ⟷ Larger(x, y)
+###
+Sentence: Gravity is a type of force
+Subject: Gravity
+Linking Verb: is
+Subject Complement: a type of force
+Logical form: ∀x. Gravity(x) ⟶ Force(x)
+###
+Sentence: Attack means fight.
+Subject: Attack
+Linking Verb: means
+Subject Complement: fight
+Logical form: ∀e1 e2. Attack(e1) ⟷ Fight(e2)
+###
+Sentence: A boy in red jacket is sitting on a chair and eating snacks.
+Subject: A boy in red jacket
+Verb Phrase: is sitting on a chair and eating snacks
+ - Main Verb: sitting, eating
+ - Auxiliary Verb: is
+ - Direct Object: snacks
+ - Prepositional Phrase (Location): on a chair
+Logical form: ∃x y z w e1 e2. Boy(x) ∧ Jacket(y) ∧ Red(y) ∧ Chair(z) ∧ Snacks(w) ∧ Sitting(e1) ∧ Agent(e1, x) ∧ Patient(e1, z) ∧ On(x, z) ∧ Eating(e2) ∧ Agent(e2, x) ∧ Patient(e2, w) ∧ In(x, y)
+###
+Sentence: A forest fire would cause deer to die or leave a woodland.
+Subject: A forest fire
+Verb Phrase: would cause deer to die or leave a woodland
+ - Main Verb: cause
+ - Direct Object: deer
+ - Infinitive Phrase (Purpose): to die or leave a woodland
+Logical form: ∀x y z e1 e2. ForestFire(x) ∧ Deer(y) ∧ Woodland(z) ⟶ (Die(e1) ∧ Agent(e1, y)) ∨ (Leave(e2) ∧ Agent(e2, y) ∧ Patient(e2, z))
+###
+Sentence: a student tosses a ball into the air.
+Subject: a student
+Verb Phrase: tosses a ball into the air
+ - Main Verb: tosses
+ - Direct Object: a ball
+ - Prepositional Phrase (Location): into the air
+Logical form: ∃x y e. Student(x) ∧ Ball(y) ∧ Tosses(e) ∧ Agent(e, x) ∧ Patient(e, y) ∧ IntoAir(y)
+###
+
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+Here is an example of answering format:
+###
+Provided sentence:
+
+Hypothesis Sentence: 
+1. A woman is playing an instrument
+Subject: A woman
+Verb Phrase: is playing an instrument
+ - Main Verb: playing
+ - Auxiliary Verb: is
+Direct Object: an instrument
+
+Explanation Sentence: 
+1. A violin is an instrument
+Subject: A violin
+Linking Verb: is
+Subject Complement: an instrument
+
+Premise Sentence: 
+1. A smiling woman is playing the violin in front of a turquoise background
+Subject: A smiling woman
+Verb Phrase: is playing the violin in front of a turquoise background
+ - Main Verb: playing
+ - Auxiliary Verb: is
+Direct Object: the violin
+Adverbial Modifier (Location): in front of a turquoise background
+
+Answer:
+
+Hypothesis Sentence: 
+1. A woman is playing an instrument.
+Subject: A woman
+Verb Phrase: is playing an instrument
+ - Main Verb: playing
+ - Auxiliary Verb: is
+Direct Object: an instrument
+Logical form: ∃x y e. Woman(x) ∧ Instrument(y) ∧ Playing(e) ∧ Agent(e, x) ∧ Patient(e, y)
+
+Explanation Sentence: 
+1. A violin is an instrument.
+Subject: A violin
+Linking Verb: is
+Subject Complement: an instrument
+Logical form: ∀x. Violin(x) ⟶ Instrument(x)
+
+Premise Sentence: 
+1. A smiling woman is playing the violin in front of a turquoise background
+Subject: A smiling woman
+Verb Phrase: is playing the violin in front of a turquoise background
+ - Main Verb: playing
+ - Auxiliary Verb: is
+Direct Object: the violin
+Adverbial Modifier (Location): in front of a turquoise background
+Logical form: ∃x y z e. Woman(x) ∧ Violin(y) ∧ Background(z) ∧ Turquoise(z) ∧ Smiling(x) ∧ Playing(e) ∧ Agent(e, x) ∧ Patient(e, y) ∧ InFrontOf(x, z)
+
+###
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+Strictly follow my instructions. 
+Ensure that the predicate-argument form of the transformed logical expressions comprehensively captures every word and contextual detail from the original sentences, accurately reflecting each predicate in the logical clauses. 
+Words/Phrases that represent the same concept at different sentences, it should be unified into the same predicate-argument form. For instance, 'eating' and 'eat' should both be represented by the predicate 'eat'.
+Quantifier variables are defined or declared only when they appear as arguments inside the parentheses of the predicate-argument forms.
+You must not include a specific consts/entity/word within the parentheses of a predicate-argument form. For example, the expression 'KnowFor(x, human)' is incorrect because it uses a specific consts 'human' as an argument. Instead, you should use alphabet variable such as x, y, z, e, etc., 
+You must translate all the context information as predicate-argument form.
+You must also define the quantifiers carefully. For example, existential quantifier '∃' means there exists at least one, and universal quantifier '∀' means for all.
+However, linking verbs, auxiliary verbs, and modal verbs such as 'be', 'is', 'could' can be ignored.
+
+Please only give me the logical forms for all hypothesis sentence, all explanatory sentences and all premise sentences, using the format of the example above.
+You may be provided with unstructured, messy sentences. You can arrange them into structed sentences. But you should still transfer them into Davidsonian event semantics logical form, like in the above examples and follow the instructions.
+
+Provided sentences:
+{input_sentence}
+
+Answer:

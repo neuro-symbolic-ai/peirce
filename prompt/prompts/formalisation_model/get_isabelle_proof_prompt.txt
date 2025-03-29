@@ -1,0 +1,212 @@
+SYSTEM: You are an expert in Isabelle theorem prover, first-order logic and Davidsonian event semantics. 
+You will be provided with premise, explanation and hypothesis sentences.
+You will be provided with an Isabelle code which consistent of some axioms, a theorem hypothesis that needs to be proven.
+The logical form of axioms indicates some explanation sentences, the logical form after "assume asm:" indicates a premise sentence and the logical form after "shows" indicates a hypothesis sentence. The natural language form is stated as the comments.
+You will be provided with some logical propositions, logical relations and derived logical rules from the explanation sentences to help you construct the proof.
+You need to consturct a proof about how to prove the theorem hypothesis in "proof -" and "qed" section using the premise (logical form after "assume asm:") and explanations (axioms).
+The proof should be derived from the premise and explanation sentences. You don't need to state the automated theorem prover you will need to use. You just need to write a proof sketch.
+Some instructions:
+1. 'sorry' and ‘fix’ command is not allowed. 
+2. colon, square brackets is illegal in the proof steps syntax.
+3. The proof should be build based on the explanation sentences. 
+4. Some explanation sentences are not necessary to infer the hypothesis, you need to build the proof steps without using those unnecessary explanation sentences.
+5. leave the automated theorem prover and proof tactic as <ATP>
+6. In Isabelle/HOL proof mode, 'and' operator is not allowed.
+7. Using the helpful logical relations and derived logical rules to help you construct the proof.
+8. You must give me the answer(code) in triple brackticks as 
+```
+code goes here
+```
+USER: Here are some examples:
+###
+Provided Isabelle Code: 
+
+```
+theory question_4_1
+
+imports Main
+
+begin
+
+typedecl entity
+
+consts
+  Amphibians :: "entity ⇒ bool"
+  Tetrapods :: "entity ⇒ bool"
+  Vertebrates :: "entity ⇒ bool"
+  FourLimbs :: "entity ⇒ bool"
+  Ancathostega :: "entity ⇒ bool"
+
+(* Explanation 1: Amphibians are the first true tetrapods, or vertebrates with four limbs. *)
+axiomatization where
+  explanation_1: "∀x. Amphibians x ⟶ (Tetrapods x ∧ Vertebrates x ∧ FourLimbs x)"
+
+(* Explanation 2: Ancathostega, as one of the earliest and most complete tetrapods found, has four limbs. *)
+axiomatization where
+  explanation_2: "∀x. Ancathostega x ⟶ (Tetrapods x ∧ FourLimbs x)"  
+
+theorem hypothesis:
+  assumes asm: "Ancathostega x"
+  (* Hypothesis: Ancathostega have four limbs. *)
+  shows "∃x. FourLimbs x"
+proof -
+  
+qed
+
+end
+```
+
+Logical Propositions:
+A: Amphibians are the first true tetrapods (from Explanatory Sentence 1)
+B: vertebrates with four limbs (from Explanatory Sentence 1)
+C: Ancathostega is one of the earliest and most complete tetrapods (from Explanatory Sentence 2)
+D: Ancathostega has four limbs (from Explanatory Sentence 2)
+
+Logical Relations:
+Implies(A, B)
+Implies(Amphibians are the first true tetrapods, vertebrates with four limbs)
+--------
+Implies(C, D)
+Implies(Ancathostega is one of the earliest and most complete tetrapods, Ancathostega has four limbs)
+--------
+
+Derived Implications:
+Implies(Not(D), Not(C))
+Implies(Not(Ancathostega has four limbs), Not(Ancathostega is one of the earliest and most complete tetrapods))
+--------
+Implies(Not(B), Not(A))
+Implies(Not(vertebrates with four limbs), Not(Amphibians are the first true tetrapods))
+--------
+
+Known Information:
+Ancathostega x
+
+Try to prove:
+∃x. FourLimbs x
+
+Answer: 
+
+```
+proof -
+  (* From the premise, we can get the known information about Ancathostega. *)
+  from asm have "Ancathostega x" <ATP>
+  (* Ancathostega is related to logical proposition C and D. *)
+  (* There is a logical relation Implies(C, D), Implies(Ancathostega is one of the earliest and most complete tetrapods, Ancathostega has four limbs)*)
+  (* Both C and D are from explanatory sentence 2, we can infer four limbs. *)
+  then have "FourLimbs x" <ATP>
+  then show ?thesis <ATP>
+qed
+```
+###
+
+```
+theory question_3_0
+imports Main
+
+begin
+typedecl entity
+typedecl event
+
+consts
+  Woman :: "entity ⇒ bool"
+  Violin :: "entity ⇒ bool"
+  Instrument :: "entity ⇒ bool"
+  Playing :: "event ⇒ bool"
+  Agent :: "event ⇒ entity ⇒ bool"
+  Patient :: "event ⇒ entity ⇒ bool"
+  Background :: "entity ⇒ bool"
+  Turquoise :: "entity ⇒ bool"
+  Smiling :: "entity ⇒ bool"
+  InFrontOf :: "entity ⇒ entity ⇒ bool"
+
+(* Explanation 1: A violin is an instrument. *)
+axiomatization where
+  explanation_1: "∀x. Violin x ⟶ Instrument x"
+
+theorem hypothesis:
+  (* Premise: A smiling woman is playing the violin in front of a turquoise background. *)
+  assumes asm: "Woman x ∧ Violin y ∧ Background z ∧ Turquoise z ∧ Smiling x ∧ Playing e ∧ Agent e x ∧ Patient e y ∧ InFrontOf x z"
+  (* Hypothesis: A woman is playing an instrument. *)
+  shows "∃x y e. Woman x ∧ Instrument y ∧ Playing e ∧ Agent e x ∧ Patient e y"
+proof -
+  
+qed
+
+end
+```
+
+Logical Propositions:
+A: a violin (from Explanatory Sentence 1)
+B: an instrument (from Explanatory Sentence 1)
+
+Logical Relations:
+Implies(A, B)
+Implies(a violin, an instrument)
+--------
+
+Derived Implications:
+Implies(Not(B), Not(A))
+Implies(Not(an instrument), Not(a violin))
+--------
+
+Known Information:
+Woman x ∧ Violin y ∧ Background z ∧ Turquoise z ∧ Smiling x ∧ Playing e ∧ Agent e x ∧ Patient e y ∧ InFrontOf x z
+
+Try to prove:
+∃x y e. Woman x ∧ Instrument y ∧ Playing e ∧ Agent e x ∧ Patient e y
+
+Answer: 
+
+```
+proof -
+  (* From the premise, we can get known information about the woman, violin, playing, agent and patient. *)
+  from asm have "Woman x ∧ Violin y ∧ Playing e ∧ Agent e x ∧ Patient e y" <ATP>
+  (* There is a logical relation Implies(A, B), Implies(a violin, an instrument) *)
+  (* A is from explanatory sentence 1, B is from explanatory sentence 1. *)
+  (* We already have Violin y, so we can infer Instrument y. *)
+  then have "Woman x ∧ Instrument y ∧ Playing e ∧ Agent e x ∧ Patient e y" <ATP>
+  then show ?thesis <ATP>
+qed
+```
+###
+
+
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+Strictly follow the instructions that I have claimed.
+Some explanatory sentences/axioms are redundant or irrelevant to infer the hypothesis.
+You need to use the relevant and necessary explanatory sentences/axioms to build the proof sketch.
+In Isabelle/HOL proof mode, 'and' operator is not allowed. You can use '∧' instead, such as 'from asm have "Woman x ∧ Violin y ∧ Playing e ∧ Agent e x ∧ Patient e y" <ATP>'
+You must leave <ATP> as the automated theorem prover, which are the proof tactic tool as the above example shows.
+You must use the provided logical relations and derived implications to help you construct the proof.
+You must give me the answer(proof code) in triple brackticks as ```code goes here```
+
+
+Premise Sentence: 
+{premise}
+
+Explanation Sentences: 
+{explanation}
+
+Hypothesis Sentence: 
+{hypothesis}
+
+Provided Isabelle Code:
+{isabelle_code}
+
+{logical_information}
+
+Known Information:
+{known_information}
+
+Try to prove:
+{try_to_prove}
+
+Answer:
+
+```
+proof -
+
+write the proof steps here
+
+qed
+```

@@ -1,0 +1,157 @@
+SYSTEM: You are an expert in Isabelle theorem prover, first-order logic and Davidsonian event semantics. 
+You will be provided with a Hypothesis sentence with its corresponding logical form (first-order logic and davidsonian event semantics).
+You will be provided with one or more Premise Sentences with their corresponding logical forms (first-order logic and davidsonian event semantics).
+You will also be provided with Isabelle code in which the axioms are already written.
+You need to transfer the logical form of Hypothesis sentence into Isabelle code after 'shows'.
+You need to transfer the logical form of each Premise sentence into Isabelle code after 'assumes asm:' under the ```theorem hypothesis:``` part.
+Some instructions:
+1. Isabelle code use ∧, ∨, ∀, ∃, ¬, ⟷, ⟶ as logic symbols. Please write the code with these logic symbols.
+2. Isabelle code utilises a non-bracketed format for its predicate-argument logical forms.
+3. Isabelle code will use HOL session syntax. Commas and square brackets are not allowed.
+4. If there are more than one premise sentence, each premise sentence should be transferred into the 'assumes asm1', 'assumes asm2', ..., 'assumes asmN'.
+5. For all the predicates appeared in the code should have been defined as consts in the code.
+6. Whenever there is a new variable (predicate) mentioned in the logical form, you must also define (add) it in the 'consts' part. Different morphological forms of a word should be defined as different consts.
+7. The code you added must have the exact logical structure (including predicates, arguments, and variables) as represented in the provided logical form.
+8. Do not write any proof steps between 'proof - end'.
+9. You should write the comments for (* Hypothesis:  *) for the code. You should write the comments for (* Premise:  *) for the code.
+10. You should never modify the logical form of explanation sentence (axiomatization) in the provided code.
+11. No brackets in the logical form (assume asm and shows) code.
+12. All the existing quantifier or for all quantifier starts at the head of the logical code.
+13. Please only give me the answer in triple brackticks as ``` ```.
+14. The indentation is very import, it should have a same indentation as the examples does.
+15. Give me the complete answer.
+The code structure for theorem hypothesis is:
+```
+provided code
+
+theorem hypothesis:
+  (* Premise : [provided premise sentence in natural language]*)
+  assumes asm: [Transfer the logical form with quantifier of premise sentence into isabelle code here, non-bracketed of the predicate-argument form]
+  (* Hypothesis: [provided hypothesis sentence in natural language] *)
+  shows [Transfer the logical form with quantifier of hypothesis sentence into isabelle code here, non-bracketed of the predicate-argument form]
+proof -
+
+
+qed
+
+end
+```
+USER: Here is an example:
+###
+Provided sentences:
+
+Hypothesis Sentence: 
+1. Adult sponges produce gametes.
+Logical form: ∀x y e. AdultSponges(x) ∧ Gametes(y) ∧ Produce(e) ∧ Agent(e, x) ∧ Patient(e, y)
+
+Premise Sentences:
+1. Students are studying adult sponges.
+Logical form: ∀x y e. Student(x) ∧ AdultSponges(y) ∧ Studying(e) ∧ Agent(e, x) ∧ Patient(e, y)
+
+2. Students are studying gametes.
+Logical form: ∀x y e. Student(x) ∧ Gametes(y) ∧ Studying(e) ∧ Agent(e, x) ∧ Patient(e, y)
+
+Provided code:
+
+imports Main
+
+begin
+
+typedecl entity
+typedecl event
+
+consts
+  AdultSponges :: "entity ⇒ bool"
+  Eggs :: "entity ⇒ bool"
+  Sperm :: "entity ⇒ bool"
+  Gametes :: "entity ⇒ bool"
+  Produce :: "event ⇒ bool"
+  Agent :: "event ⇒ entity ⇒ bool"
+  Patient :: "event ⇒ entity ⇒ bool"
+
+(* Explanation 1: Adult sponges produce eggs and sperm. *)
+axiomatization where
+  explanation_1: "∀x. AdultSponges x ⟶ (∃e y z. Eggs y ∧ Sperm z ∧ Produce e ∧ Agent e x ∧ Patient e y ∧ Patient e z)"
+
+(* Explanation 2: Sperm and eggs are cells known as gametes. *)
+axiomatization where
+  explanation_2: "∀x y. Sperm x ∧ Eggs y ⟶ Gametes x ∧ Gametes y"
+
+theorem hypothesis:
+  assumes asm1:
+  assumes asm2: 
+  shows 
+proof -
+
+
+qed
+
+end
+
+Answer:
+```
+imports Main
+
+begin
+
+typedecl entity
+typedecl event
+
+consts
+  AdultSponges :: "entity ⇒ bool"
+  Eggs :: "entity ⇒ bool"
+  Sperm :: "entity ⇒ bool"
+  Gametes :: "entity ⇒ bool"
+  Produce :: "event ⇒ bool"
+  Agent :: "event ⇒ entity ⇒ bool"
+  Patient :: "event ⇒ entity ⇒ bool"
+  Student :: "entity ⇒ bool"
+  Studying :: "event ⇒ bool"
+
+(* Explanation 1: Adult sponges produce eggs and sperm. *)
+axiomatization where
+  explanation_1: "∀x. AdultSponges x ⟶ (∃e y z. Eggs y ∧ Sperm z ∧ Produce e ∧ Agent e x ∧ Patient e y ∧ Patient e z)"
+
+(* Explanation 2: Sperm and eggs are cells known as gametes. *)
+axiomatization where
+  explanation_2: "∀x y. Sperm x ∧ Eggs y ⟶ Gametes x ∧ Gametes y"
+
+theorem hypothesis:
+  (* Premise 1: students are studying adult sponges *)
+  assumes asm1: "Student x ∧ AdultSponges y ∧ Studying e ∧ Agent e x ∧ Patient e y"
+  (* Premise 2: students are studying gametes *)
+  assumes asm2: "Student x ∧ Gametes y ∧ Studying e ∧ Agent e x ∧ Patient e y"
+  (* Hypothesis: Adult sponges produce gametes. *)
+  shows "∃x y e. AdultSponges x ∧ Gametes y ∧ Produce e ∧ Agent e x ∧ Patient e y"
+proof -
+
+
+qed
+
+end
+
+```
+###
+
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+Strictly follow my instructions. 
+You must keep all consts existed before in the Provided code and add any new consts from the logical form of Hypothesis sentence and Premise sentences.
+Isabelle code after shows must represents the exactly same logical form and information of the provided hypothesis sentence. You cannot change it.
+Isabelle code after assumes must represents the exactly same logical form and information of the provided premise sentences. You cannot change it.
+If the premise is none, the logical form after 'assumes' should be the context information that assumes to be true to prove the Hypothesis sentence but it cannot be as same as the hypothesis sentence.
+The generated Isabelle code should not contain any commas in the code.
+Please only give me the answer with logical form for all the sentences below in the format used in the above example.
+
+
+Provided sentences:
+{input_sentence}
+
+Provided code:
+{axiom_code}
+
+
+Answer:
+
+```
+answer code goes here (complete isabelle code )
+```

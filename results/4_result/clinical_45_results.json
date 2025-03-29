@@ -1,0 +1,23 @@
+{
+    "id": 45,
+    "premise": "none",
+    "hypothesis": "Unknown relevance of CREBBP/BCORL1 fusion",
+    "label": "entailment",
+    "explanation": "Patient with CREBBP/ BCORL1 fusion.\nUnknown relevance of fusion partner.\nUnknown fusion and breakpoints.",
+    "results": {
+        "semantic validity": true,
+        "premise": null,
+        "hypothesis": "Unknown relevance of CREBBP/BCORL1 fusion",
+        "refined explanation": "Patient with CREBBP/ BCORL1 fusion.\nUnknown relevance of fusion partner.\nUnknown fusion and breakpoints.",
+        "refined iteration": 0,
+        "history explanation": [
+            "0 iteration: Patient with CREBBP/ BCORL1 fusion.\nUnknown relevance of fusion partner.\nUnknown fusion and breakpoints."
+        ],
+        "history semantic validity": [
+            "0 iteration: True"
+        ],
+        "history critique output": [
+            "0 iteration: {'syntactic validity': True, 'error code': '', 'solving time': 12.294275999069214, 'proof tactics': ['Sledgehammering...', 'zipperposition found a proof...', 'cvc4 found a proof...', 'verit found a proof...', 'cvc4 found a proof...', 'vampire found a proof...', 'verit: Try this: using explanation_2 by blast (1 ms)', 'e found a proof...', 'zipperposition: Found duplicate proof', 'cvc4: Found duplicate proof', 'e: Found duplicate proof', 'cvc4: Found duplicate proof', 'vampire: Found duplicate proof', 'zipperposition found a proof...', 'zipperposition: Found duplicate proof', 'Done'], 'code': 'theory clinical_45_0\\nimports Main\\n\\nbegin\\n\\ntypedecl entity\\ntypedecl event\\n\\nconsts\\n  Patient :: \"entity \u21d2 bool\"\\n  Fusion :: \"entity \u21d2 bool\"\\n  With :: \"entity \u21d2 entity \u21d2 bool\"\\n  Relevance :: \"entity \u21d2 bool\"\\n  Unknown :: \"entity \u21d2 bool\"\\n  Partner :: \"entity \u21d2 bool\"\\n  Of :: \"entity \u21d2 entity \u21d2 bool\"\\n  Breakpoints :: \"entity \u21d2 bool\"\\n\\n(* Explanation 1: Patient with CREBBP/ BCORL1 fusion *)\\naxiomatization where\\n  explanation_1: \"\u2203x y. Patient x \u2227 Fusion y \u2227 With x y\"\\n\\n(* Explanation 2: Unknown relevance of fusion partner *)\\naxiomatization where\\n  explanation_2: \"\u2203x y. Relevance x \u2227 Unknown x \u2227 Partner y \u2227 Fusion y \u2227 Of x y\"\\n\\n(* Explanation 3: Unknown fusion and breakpoints *)\\naxiomatization where\\n  explanation_3: \"\u2203x y. Fusion x \u2227 Breakpoints y \u2227 Unknown x \u2227 Unknown y\"\\n\\ntheorem hypothesis:\\n  assumes asm: \"Fusion y\"\\n  (* Hypothesis: Unknown relevance of CREBBP/BCORL1 fusion *)\\n  shows \"\u2203x y. Relevance x \u2227 Unknown x \u2227 Fusion y \u2227 Of x y\"\\nproof -\\n  (* From the premise, we have the known information about Fusion y. *)\\n  from asm have \"Fusion y\" <ATP>\\n  (* Explanation 2 provides information about unknown relevance of a fusion partner. *)\\n  (* We can use this to infer the hypothesis. *)\\n  from explanation_2 have \"\u2203x. Relevance x \u2227 Unknown x \u2227 Partner y \u2227 Fusion y \u2227 Of x y\" <ATP>\\n  (* Since we have Fusion y, we can conclude the existence of such x and y. *)\\n  then show ?thesis <ATP>\\nqed\\n\\nend\\n', 'logical information': 'Logical Propositions:\\nA: patient with CREBBP/BCORL1 fusion (from Explanatory Sentence 1)\\nB: unknown relevance of fusion partner (from Explanatory Sentence 2)\\nC: unknown fusion and breakpoints (from Explanatory Sentence 3)\\n\\nLogical Relations:\\n\\nDerived Implications:\\n'}"
+        ]
+    }
+}

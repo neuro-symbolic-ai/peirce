@@ -1,0 +1,23 @@
+{
+    "id": 10,
+    "premise": "A festival displays two men dressed in red makeup and costume, while an older man has cream on his face.",
+    "hypothesis": "Two men are dressed in makeup",
+    "label": "entailment",
+    "explanation": " In red makeup is a type of makeup.",
+    "results": {
+        "semantic validity": true,
+        "premise": "A festival displays two men dressed in red makeup and costume, while an older man has cream on his face.",
+        "hypothesis": "Two men are dressed in makeup",
+        "refined explanation": " In red makeup is a type of makeup.",
+        "refined iteration": 0,
+        "history explanation": [
+            "0 iteration:  In red makeup is a type of makeup."
+        ],
+        "history semantic validity": [
+            "0 iteration: True"
+        ],
+        "history critique output": [
+            "0 iteration: {'syntactic validity': True, 'error code': '', 'solving time': 10.794575929641724, 'proof tactics': ['Sledgehammering...', 'zipperposition found a proof...', 'cvc4 found a proof...', 'cvc4 found a proof...', 'cvc4: Try this: using assms explanation_1 by blast (19 ms)', 'zipperposition: Found duplicate proof', 'verit found a proof...', 'cvc4 found a proof...', 'cvc4: Found duplicate proof', 'verit: Found duplicate proof', 'vampire found a proof...', 'cvc4: Found duplicate proof', 'e found a proof...', 'zipperposition found a proof...', 'zipperposition: Found duplicate proof', 'e: Found duplicate proof', 'zipperposition found a proof...', 'vampire: Found duplicate proof', 'zipperposition: Found duplicate proof', 'Done'], 'code': 'theory esnli_10_0\\nimports Main\\n\\nbegin\\n\\ntypedecl entity\\ntypedecl event\\n\\nconsts\\n  RedMakeup :: \"entity \u21d2 bool\"\\n  Makeup :: \"entity \u21d2 bool\"\\n  Men :: \"entity \u21d2 bool\"\\n  DressedIn :: \"entity \u21d2 entity \u21d2 bool\"\\n  Festival :: \"entity \u21d2 bool\"\\n  Costume :: \"entity \u21d2 bool\"\\n  Display :: \"event \u21d2 bool\"\\n  Agent :: \"event \u21d2 entity \u21d2 bool\"\\n  Patient :: \"event \u21d2 entity \u21d2 bool\"\\n  OlderMan :: \"entity \u21d2 bool\"\\n  Cream :: \"entity \u21d2 bool\"\\n  Face :: \"entity \u21d2 bool\"\\n  Has :: \"event \u21d2 bool\"\\n  On :: \"entity \u21d2 entity \u21d2 bool\"\\n\\n(* Explanation 1: In red makeup is a type of makeup. *)\\naxiomatization where\\n  explanation_1: \"\u2200x. RedMakeup x \u27f6 Makeup x\"\\n\\ntheorem hypothesis:\\n  (* Premise: A festival displays two men dressed in red makeup and costume, while an older man has cream on his face. *)\\n  assumes asm: \"Festival x \u2227 Men y \u2227 RedMakeup z \u2227 Costume w \u2227 Display e1 \u2227 Agent e1 x \u2227 Patient e1 y \u2227 DressedIn y z \u2227 DressedIn y w \u2227 OlderMan y \u2227 Cream z \u2227 Face w \u2227 Has e2 \u2227 Agent e2 y \u2227 Patient e2 z \u2227 On z w\"\\n  (* Hypothesis: Two men are dressed in makeup. *)\\n  shows \"\u2203x y. Men x \u2227 Makeup y \u2227 DressedIn x y\"\\nproof -\\n  (* From the premise, we have information about the festival, men, red makeup, and dressing. *)\\n  from asm have \"Men y \u2227 RedMakeup z \u2227 DressedIn y z\" <ATP>\\n  (* There is a logical relation Implies(A, B), Implies(red makeup, a type of makeup) *)\\n  (* A is from explanatory sentence 1, B is from explanatory sentence 1. *)\\n  (* We already have RedMakeup z, so we can infer Makeup z. *)\\n  then have \"Men y \u2227 Makeup z \u2227 DressedIn y z\" <ATP>\\n  then show ?thesis <ATP>\\nqed\\n\\nend\\n', 'logical information': 'Logical Propositions:\\nA: red makeup (from Explanatory Sentence 1)\\nB: a type of makeup (from Explanatory Sentence 1)\\n\\nLogical Relations:\\nImplies(A, B)\\nImplies(red makeup, a type of makeup)\\n--------\\n\\nDerived Implications:\\n'}"
+        ]
+    }
+}

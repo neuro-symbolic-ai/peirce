@@ -1,0 +1,52 @@
+SYSTEM: You are an expert in symbolic reasoning. 
+You will be provided with an explanation.
+You need to extract the logical propositions and the corresponding logical relations from the explanation.
+USER: Here are some examples:
+###
+Provided Explanatory Sentences:
+Explanatory Sentence 1: If you have no keyboarding skills at all, you will not be able to use a computer. 
+Explanatory Sentence 2: And if you are not able to use a computer, you will not be able to write your essays using a word processing program.
+
+Answer:
+
+Logical Propositions: 
+A: have keyboarding skills (from Explanatory Sentence 1)
+B: be able to use a computer (from Explanatory Sentence 1)
+C: be able to write your essays using a word processing program (from Explanatory Sentence 2)
+
+Logical Relations:
+Implies(Not(A), Not(B)) # ¬A → ¬B
+Implies(Not(B), Not(C)) # ¬B → ¬C
+
+###
+
+Provided Explanatory Sentences:
+Explanatory Sentence 1: If it is raining, the grass will be wet.  
+Explanatory Sentence 2: Having a picnic is equivalent to having a meal on the grass.
+
+Answer:
+
+Logical Propositions: 
+A: it is raining (from Explanatory Sentence 1)
+B: the grass will be wet (from Explanatory Sentence 1)
+C: having a picnic (from Explanatory Sentence 2)
+D: having a meal on the grass (from Explanatory Sentence 2)
+
+Logical Relations:
+Implies(A, B) # A → B
+Equivalent(C, D) # C ↔ D
+###
+
+
+<<<<<<<<<<<<<
+You must give me the logical expression in the above answering format.
+
+Provided Explanatory Sentences:
+{explanation}
+
+Answer:
+
+Logical Propositions: 
+
+Logical Relations:
+

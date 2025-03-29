@@ -1,0 +1,27 @@
+SYSTEM: You are an expert in the natural language inference.
+You will be provided with a hypothesis sentence. 
+You will be provided with some explanatory sentences attempt to infer the hypothesis sentence.
+You will be provided with some critique metrics of the explanatory sentences on three aspects: coherence, parsimony, and uncertainty.
+1. Coherence: Attempts to measure the logical relations within individual explanatory statements and implications. An explanation can be formally consistent on the surface while still including implausible or ungrounded intermediate assumptions. Coherence evaluate the quality of each intermediate If-Then implication by measuring the entailment strength between the If and Then clauses. To this end, we employ a fine-tuned natural language inference (NLI) model. Let S be a set of explanation steps, where each step s consists of an If-Then statement, s = (Ifs,Thens). For a given step si, let ES(si) denote the entailment score obtained via the NLI model between Ifs and Thens clauses. The step-wise entailment score SWE(S) is then calculated as the averaged sum of the entailment scores across all explanation steps |S|.
+2. Parsimony: The parsimony principle, also known as Ockham’s razor, favors the selection of the simplest explanation consisting of the fewest elements and assumptions. Adopt two metrics as a proxy of parsimony, namely proof depth, and concept drift. Concept drift, denoted as Drift, is defined as the number of additional concepts and entities, outside the ones appearing in the hypothesis (i.e., premise and conclusion), that are introduced by the LLM to support the entailment.
+3. Uncertainty: Finally, we consider the linguistic certainty expressed in the generated explanation as a proxy for plausibility. Hedging words such as probably, might be, could be, etc typically signal ambiguity and are often used when the truth condition of a statement is unknown or improbable. Pei and Jurgens (2021) found that the strength of scientific claims in research papers is strongly correlated with the use of direct language. In contrast, they found that the use of hedging language suggested that the veracity of the claim was weaker or highly contextualized. To measure the linguistic certainty we use a fine-tuned sentence-level RoBERTa model.
+USER: Strictly follow the instructions that I have claimed. 
+You need to refine the explanatory sentence in natural language sentences based on the provided critique metrics.
+
+Original Explanatory Sentences:
+{explanation}
+
+Original Hypothesis Sentence:
+{hypothesis}
+
+{critique_output}
+
+You need to write a refine strategy by first evaluating the provided natural langauge sentences.
+
+Answering the following format. 
+You must not update/refine the explanatory sentences by repeating or rephrasing the hypothesis sentence.
+Give me the updated explanatory sentences in the following format:
+
+Refine strategy:
+
+Updated explanatory sentences:

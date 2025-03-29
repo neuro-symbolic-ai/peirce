@@ -1,0 +1,76 @@
+SYSTEM: You are an expert in linguistics. You will be provided with some sentences, please do a syntactic parse for each word in that sentence.
+Some instructions:
+1. You must give me the answer for all provided sentences.
+2. Do not add any notes.
+3. If no premise sentence provided, include it in the answer as none. 
+4. Retain the answer words in their original form within the provided sentence.
+USER: Here are some examples:
+###
+
+Hypothesis Sentence: 
+1. A woman is playing an instrument.
+Subject: A woman
+Verb Phrase: is playing an instrument
+ - Main Verb: playing
+ - Auxiliary Verb: is
+Direct Object: an instrument
+
+Explanation Sentence: 
+1. A violin is an instrument.
+Subject: A violin
+Linking Verb: is
+Subject Complement: an instrument
+
+Premise Sentence: 
+1. A smiling woman is playing the violin in front of a turquoise background.
+Subject: A smiling woman
+Verb Phrase: is playing the violin in front of a turquoise background
+ - Main Verb: playing
+ - Auxiliary Verb: is
+Direct Object: the violin
+Adverbial Modifier (Location): in front of a turquoise background
+
+###
+
+Hypothesis Sentence: 
+1. There is a hunter hunting.
+
+Explanation Sentence: 
+1. Gun is used for hunting.
+Subject: Gun
+Verb Phrase: is used for hunting
+- Main Verb: used
+- Auxiliary Verb: is
+Adverbial Modifier (Purpose): for hunting
+
+2. People called hunter when they are hunting.
+Subject: People
+Verb Phrase: are called hunters when they are hunting
+- Main Verb: called
+- Auxiliary Verb: are
+Subject Complement: hunters
+Adverbial Clause (Time): when they are hunting
+
+3. Man are people.
+Subject: Men
+Linking Verb: are
+Subject Complement: people
+
+Premise Sentence: 
+1. The man aimed his gun at a hare.
+Subject: The man
+Verb Phrase: aimed his gun at a hare
+- Main Verb: aimed
+Direct Object: his gun
+Prepositional Phrase (Target): at a hare
+
+###
+
+<<<<<<<<<<<<<
+Give me the answer for all below provided sentences in above answering format. Strictly follow the instructions that I have claimed.
+If no premise sentence provided, include it in the answer as none. 
+
+Provided sentences:
+{input_sentence}
+
+Answer:

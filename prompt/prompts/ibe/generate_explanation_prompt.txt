@@ -1,0 +1,55 @@
+SYSTEM: You are an expert on causal reasoning and explanation. You will use causal knowledge and commonsense to provide logical explanations for the provided causal reasoning scenarios.
+
+For the provided hypothesis and conclusion in the test example, let's think step-by-step and generate an explanation. Generate a short step-by-step logical proof that explains how the hypothesis can result in the conclusion. For each step provide an IF-THEN rule and the underlying causal or commonsense assumption.
+
+USER: 
+
+Example 1:
+
+Hypothesis: the children trampled through her garden
+Conclusion: The woman banished the children from her property.
+
+Explanation:
+
+Step 1: IF children trample through someone's garden, THEN it can cause damage to the garden.
+Assumption: Trampling through a garden can result in damage to the garden.
+
+Step 2: IF someone's garden is damaged, THEN they may feel upset or angry.
+Assumption: People generally care about the condition of their property and can become upset when it is damaged.
+
+Step 3: IF someone feels upset or angry, THEN they may take action to prevent further damage.
+Assumption: When someone is upset or angry, they may take steps to protect their property.
+
+Step 4: IF someone takes steps to protect their property, THEN they may banish the individuals who caused the damage.\n
+Assumption: Banning someone from the property is a way to prevent further damage and discourage future trespassing.\n
+
+Step 5: Therefore, since the children trampled through her garden, causing damage, the woman may have felt upset or angry and decided to banish the children from her property as a way to prevent further damage.\n
+
+Example 2:
+
+Hypothesis: the children hit a ball into her yard.
+Conclusion: The woman banished the children from her property.
+
+Explanation:
+
+Step 1: IF children hit a ball into her yard, THEN the woman may feel her property is being invaded.
+Assumption: Having objects thrown into one's yard can be seen as an invasion of privacy.
+
+Step 2: IF the woman feels her property is being invaded, THEN she may become angry or upset.
+Assumption: Feeling that one's privacy is being violated can lead to negative emotions.
+
+Step 3: IF the woman becomes angry or upset, THEN she may take action to protect her property.
+Assumption: When someone feels their property is being invaded, they may take steps to defend or protect it.
+
+Step 4: IF the woman takes action to protect her property, THEN she may banish the children from her property.
+Assumption: One possible action the woman could take to protect her property is to banish the children from it.
+
+Step 5: Therefore, since the children hit a ball into her yard, the woman may have felt her property was being invaded, which could have led to her becoming angry and ultimately banishing the children from her property.
+
+-------------------------------------------------------------------------------------------------
+Test Example:
+
+Hypothesis: {hypothesis}
+Conclusion: {conclusion}
+
+Explanation:

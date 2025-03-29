@@ -1,0 +1,105 @@
+SYSTEM: You are an expert in semantics, formal language and neo-davidsonian event semantics. 
+You will be provided with some sentences. 
+These sentences have been transferred into Isabelle/HOL symbolic language. 
+However, the quantifiers in the logical form may not be defined correctly.
+There might be missing variables after the quantifiers for arguments inside the parentheses of the predicate-argument forms of an axiom or a theorem.
+Refine the logical forms if there are any quantifiers that are not defined correctly.
+Some instructions:
+Give me the answer in triple brackticks as 
+```
+code goes here
+```
+USER: Here is an example:
+
+Provided Isabelle code:
+```
+theory qasc_7_1
+imports Main
+
+begin
+
+typedecl entity
+typedecl event
+
+consts
+  Consumer :: "entity ⇒ bool"
+  Feed :: "event ⇒ bool"
+  Agent :: "event ⇒ entity ⇒ bool"
+  At :: "event ⇒ entity ⇒ bool"
+  MoreThanOneTrophicLevel :: "entity ⇒ bool"
+  Omnivore :: "entity ⇒ bool"
+
+(* Explanation 1: Many consumers feed at more than one trophic level. *)
+axiomatization where
+  explanation_1: "∀x e. Consumer x ⟶ (Feed e ∧ Agent e x ∧ At e y ∧ MoreThanOneTrophicLevel y)"
+
+(* Explanation 2: Omnivores are a type of consumer. *)
+axiomatization where
+  explanation_2: "∀x. Omnivore x ⟶ Consumer x"
+
+theorem hypothesis:
+  assumes asm: "Omnivore x"
+  (* Hypothesis: Omnivores can feed at more than one trophic level. *)
+  shows "∀x e. Omnivore x ⟶ (Feed e ∧ Agent e x ∧ At e y ∧ MoreThanOneTrophicLevel y)"
+  
+
+end
+```
+
+Answer:
+Explanation 1 states "Many consumers", but it use the universal quantifier '∀'.
+We should use the existential quantifier '∃' instead. 
+For the quantifier variables in explanation_1, the variable 'y' is missing.
+For the quantifier variables in shows, the variable 'y' is missing.
+
+```
+theory qasc_7_1
+imports Main
+
+begin
+
+typedecl entity
+typedecl event
+
+consts
+  Consumer :: "entity ⇒ bool"
+  Feed :: "event ⇒ bool"
+  Agent :: "event ⇒ entity ⇒ bool"
+  At :: "event ⇒ entity ⇒ bool"
+  MoreThanOneTrophicLevel :: "entity ⇒ bool"
+  Omnivore :: "entity ⇒ bool"
+
+(* Explanation 1: Many consumers feed at more than one trophic level. *)
+axiomatization where
+  explanation_1: "∃x y e. Consumer x ⟶ (Feed e ∧ Agent e x ∧ At e y ∧ MoreThanOneTrophicLevel y)"
+
+(* Explanation 2: Omnivores are a type of consumer. *)
+axiomatization where
+  explanation_2: "∀x. Omnivore x ⟶ Consumer x"
+
+theorem hypothesis:
+  assumes asm: "Omnivore x"
+  (* Hypothesis: Omnivores can feed at more than one trophic level. *)
+  shows "∀x y e. Omnivore x ⟶ (Feed e ∧ Agent e x ∧ At e y ∧ MoreThanOneTrophicLevel y)"
+  
+
+end
+```
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+Strictly follow my instructions. 
+The quantifier for all Isabelle logical code must be defined correctly according to the natural langauge form (as the comments above each logical form).
+You must evaluate and reasoning first then give me the full refined code.
+
+
+Provided Isabelle code:
+{code}
+
+
+Answer:
+
+``` 
+answer code goes here (complete refined isabelle code)
+```
+
+Strictly follow the instructions that I have claimed.
+The answer code should keep the exactly theory/code format as it was provided. 

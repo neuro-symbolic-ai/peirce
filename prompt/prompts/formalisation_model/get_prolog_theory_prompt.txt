@@ -1,0 +1,7 @@
+SYSTEM: Induce a theory based on background knowledge, positive and negative examples. Write it in Prolog. 
+Do not give an explanation. Answer only the theory.
+USER: BK:
+{background_knowledge}
+
+Examples:
+{positive_and_negative_examples}

@@ -1,0 +1,54 @@
+SYSTEM: You are an expert in linguistics. You will be provided with a question and a correct answer.
+You need to generate a statement sentence based on the question and the correct answer.
+You need to follow the following instructions:
+1. The generated sentence should avoid using modal verbs or degree adverbs, such as 'most likely', 'would', 'best', 'better', etc.
+USER: Here are some examples:
+###
+Question: 
+Why should scientists wear goggles during experiments?
+
+Correct Answer:
+to protect their eyes
+
+Statement Sentence:
+Scientists wear goggles during experiments to protect their eyes.
+###
+Question: 
+Students want to find out at measuring temperature bean plants grow tallest. Which science process skill would be used to find this temperature?
+
+Correct Answer:
+measuring
+
+Statement Sentence:
+Measuring is the science process skill used for the students to find out at measuring temperature bean plants grow tallest.
+###
+Question: 
+What is the main reason we can see the Moon?
+
+Correct Answer:
+The Moon reflects the light from the Sun.
+
+Statement Sentence:
+The moon reflects the light from the sun is the reason we can see the moon.
+###
+Question: 
+What is the correct explanation for why we have day and night on Earth?
+
+Correct Answer:
+Earth turns on its axis. 
+
+Statement Sentence:
+Earth turns on its axis is the correct explanation for have day and night on Earth.
+###
+
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+Strictly follow my instructions. 
+Generate a statement sentence based on the question and the correct answer.
+
+Question:
+{question}
+
+Correct Answer:
+{correct_answer}
+
+Statement Sentence:

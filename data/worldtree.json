@@ -1,0 +1,102 @@
+[
+    {
+        "id": 1,
+        "question_label": "NYSEDREGENTS_2005_4_30",
+        "Question": "A simple machine that helps move a flag up a flagpole is",
+        "Choices": "{'A': 'a bar magnet', 'B': 'an inclined plane', 'C': 'a pulley', 'D': 'a lever'}",
+        "Correct answer": "C",
+        "explanation": "a pulley is used to lift a flag on a flagpole.\na pulley is a kind of simple machine.\nto lift means to move up.",
+        "hypothesis": "A pulley is a simple machine that helps move a flag up a flagpole.",
+        "premise": "none"
+    },
+    {
+        "id": 2,
+        "question_label": "Mercury_SC_409254",
+        "Question": "How might this new technology help people in Hawaii?",
+        "Choices": "{'A': 'by increasing the types of food available in stores', 'B': 'by decreasing the amount of food sold in stores', 'C': 'by increasing the time it takes to shop in stores', 'D': 'by decreasing the number of stores'}",
+        "Correct answer": "A",
+        "explanation": "as ability to transport food increases around the world , the available types of food in distant locations will increase.\nas ability to preserve food increases , the ability to transport food increases.\nto preserve food means to keep fresh food from spoiling.\nhaving a variety of foods available has a positive impact on people's lives.\nvariety means different kinds; different types.\nhelping something has a positive impact on that something.\nHawaii is located far from the United States mainland.\nfar means great in distance.\ndistant means great in distance.\nthe United States of America is a kind of location.",
+        "hypothesis": "This new technology might help people in Hawaii by increasing the types of food available in stores.",
+        "premise": "a grocery company found a way to keep fresh foods from spoiling when transporting them long distances."
+    },
+    {
+        "id": 3,
+        "question_label": "VASoL_2009_3_17",
+        "Question": "Both hurricanes and tornadoes always ___.",
+        "Choices": "{'A': 'cause flooding', 'B': 'are hundreds of miles wide', 'C': 'have high winds', 'D': 'produce light snow'}",
+        "Correct answer": "C",
+        "explanation": "a hurricane has high wind speeds.\na tornado has high wind speeds.",
+        "hypothesis": "Both hurricanes and tornadoes always have high winds.",
+        "premise": "none"
+    },
+    {
+        "id": 4,
+        "question_label": "ACTAAP_2009_5_5",
+        "Question": "Which of these minerals is most likely to be yellow?",
+        "Choices": "{'A': 'Talc', 'B': 'Sulfur', 'C': 'Gypsum', 'D': 'Hematite'}",
+        "Correct answer": "B",
+        "explanation": "sulfur is yellow in color.\nsulfur is a kind of mineral.",
+        "hypothesis": "Sulfur is a mineral that is likely to be yellow.",
+        "premise": "janet has been given some minerals to identify.\none of her samples is yellow."
+    },
+    {
+        "id": 5,
+        "question_label": "MCAS_2016_5_9",
+        "Question": "In a meadow ecosystem, mice receive most of the energy they need to survive directly from which of the following sources?",
+        "Choices": "{'A': 'minerals', 'B': 'oxygen', 'C': 'plants', 'D': 'water'}",
+        "Correct answer": "C",
+        "explanation": "a mouse is a kind of animal.\nIn the food chain process an animal has the role of consumer which eats producers;other animals for food.\ngreen plants are a kind of producer.\nfood is a source of energy for animals; plants.\neating; taking in food is used to get nutrients;energy by animals; living things.\nliving things all require energy for survival.\nan animal is a kind of living thing.\nif an organism eats something then that something is a source of frood to that organism.\nreceive means get.\nherbivores only eat plants.\na mouse is a kind of herbivore.",
+        "hypothesis": "In a meadow ecosystem, mice receive most of the energy they need to survive directly from plants.",
+        "premise": "none"
+    },
+    {
+        "id": 6,
+        "question_label": "AKDE&ED_2008_4_27",
+        "Question": "Which statement best explains why this difference occurs?",
+        "Choices": "{'A': 'The Sun burns hotter in the summer.', 'B': 'The Sun moves below the horizon in the summer.', 'C': 'The Northern Hemisphere is closer to the Sun in the winter.', 'D': 'The Northern Hemisphere is tilted away from the Sun in the winter.'}",
+        "Correct answer": "D",
+        "explanation": "greatest means largest; highest; most.\nthe amount of daylight is least in the winter.\nwinter is when a hemisphere is tilted away from the sun.\nAlaska is a state located in the United States of America.\nUnited States is located in the northern hemisphere.\nthe Earth being tilted on its axis causes seasons.\nthe amount of daylight is greatest in the summer.\nwinter is a kind of season.\nsummer is a kind of season.\namount is a property of something and includes ordered values of none; least; little; some; half; much; many; most; all.\nfewer means lower; less in number.",
+        "hypothesis": "The Northern Hemisphere is tilted away from the Sun in the winter.",
+        "premise": "in alaska, there are fewer hours of daylight in the winter than in the summer."
+    },
+    {
+        "id": 7,
+        "question_label": "NYSEDREGENTS_2011_4_16",
+        "Question": "An example of a learned trait is",
+        "Choices": "{'A': 'being able to read', 'B': 'being able to breathe', 'C': 'having a scar', 'D': 'having brown eyes'}",
+        "Correct answer": "A",
+        "explanation": "usually people learn how to read and write in school.\ntrait is synonymous with characteristic.\ninherited characteristics are the opposite of learned characteristics; acquired characteristics.\ninheriting is when a inherited characteristic is copied; is passed from parent to offspring by genetics;DNA.",
+        "hypothesis": "Being able to read is an example of a learned trait.",
+        "premise": "none"
+    },
+    {
+        "id": 8,
+        "question_label": "ACTAAP_2009_5_13",
+        "Question": "Which of these steps communicates the results of his investigation?",
+        "Choices": "{'A': 'Conduct multiple trials', 'B': 'Write down a procedure', 'C': 'Identify the materials to be tested', 'D': 'Record observations and data in a journal'}",
+        "Correct answer": "D",
+        "explanation": "investigation sometimes requires experimentation.\nobservations; data are a part of the results of an experiment.",
+        "hypothesis": "Recording observations and data in a journal communicates the results of an investigation.",
+        "premise": "alan is using cabbage juice to determine the relative ph of various household solutions."
+    },
+    {
+        "id": 9,
+        "question_label": "Mercury_SC_401231",
+        "Question": "Many leaves appear green because the leaves",
+        "Choices": "{'A': 'resist green light.', 'B': 'bend all colors except green.', 'C': 'reflect green light.', 'D': 'reflect all colors except green.'}",
+        "Correct answer": "C",
+        "explanation": "if an object reflects a light of a certain color then the object appears to be that color.\na leaf is a kind of object.\ngreen is a kind of color.\na leaf is often green in color.",
+        "hypothesis": "Many leaves appear green because they reflect green light.",
+        "premise": "none"
+    },
+    {
+        "id": 10,
+        "question_label": "AKDE&ED_2008_4_1",
+        "Question": "Which science process are the students using when they put the leaves in different groups?",
+        "Choices": "{'A': 'classifying', 'B': 'predicting', 'C': 'measuring', 'D': 'experimenting'}",
+        "Correct answer": "A",
+        "explanation": "shape is a property of an object.\nclassifying means grouping objects; materials by their properties.\na leaf is a kind of object.\nclassifying is a kind of science process.\ngrouping means putting; placing in different groups.",
+        "hypothesis": "The students are using the science process of classifying when they put the leaves in different groups.",
+        "premise": "students are studying some leaves. \nthey group the leaves by shape."
+    }
+]

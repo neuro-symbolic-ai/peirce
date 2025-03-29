@@ -1,0 +1,23 @@
+{
+    "id": 2,
+    "premise": "on a snowy day a man with a north face jacket walks through the crowded streets past a garbage truck",
+    "hypothesis": "A man walks down the street in winter.",
+    "label": "entailment",
+    "explanation": " Since the man is walking on a snowy day down a street, it is likely winter.",
+    "results": {
+        "semantic validity": true,
+        "premise": "on a snowy day a man with a north face jacket walks through the crowded streets past a garbage truck",
+        "hypothesis": "A man walks down the street in winter.",
+        "refined explanation": " Since the man is walking on a snowy day down a street, it is likely winter.",
+        "refined iteration": 0,
+        "history explanation": [
+            "0 iteration:  Since the man is walking on a snowy day down a street, it is likely winter."
+        ],
+        "history semantic validity": [
+            "0 iteration: True"
+        ],
+        "history critique output": [
+            "0 iteration: {'syntactic validity': True, 'error code': '', 'solving time': 12.419174909591675, 'proof tactics': ['Sledgehammering...', 'cvc4 found a proof...', 'zipperposition found a proof...', 'cvc4: Try this: using explanation_1 by blast (1 ms)', 'zipperposition: Found duplicate proof', 'cvc4 found a proof...', 'spass found a proof...', 'cvc4 found a proof...', 'cvc4: Found duplicate proof', 'verit found a proof...', 'vampire found a proof...', 'cvc4: Found duplicate proof', 'spass: Found duplicate proof', 'verit: Found duplicate proof', 'e found a proof...', 'zipperposition found a proof...', 'e: Found duplicate proof', 'zipperposition: Found duplicate proof', 'vampire: Found duplicate proof', 'zipperposition found a proof...', 'zipperposition: Found duplicate proof', 'Done'], 'code': 'theory esnli_2_0\\nimports Main\\n\\n\\nbegin\\n\\ntypedecl entity\\ntypedecl event\\n\\nconsts\\n  Man :: \"entity \u21d2 bool\"\\n  Walking :: \"event \u21d2 bool\"\\n  OnSnowyDay :: \"event \u21d2 bool\"\\n  DownStreet :: \"event \u21d2 bool\"\\n  LikelyWinter :: \"event \u21d2 bool\"\\n  Agent :: \"event \u21d2 entity \u21d2 bool\"\\n  NorthFaceJacket :: \"entity \u21d2 bool\"\\n  ThroughStreets :: \"event \u21d2 bool\"\\n  PastGarbageTruck :: \"event \u21d2 bool\"\\n  Wearing :: \"entity \u21d2 entity \u21d2 bool\"\\n  CrowdedStreets :: \"entity \u21d2 bool\"\\n  In :: \"entity \u21d2 entity \u21d2 bool\"\\n\\n(* Explanation 1: Since the man is walking on a snowy day down a street, it is likely winter. *)\\naxiomatization where\\n  explanation_1: \"\u2203x e. Man x \u2227 Walking e \u2227 OnSnowyDay e \u2227 DownStreet e \u2227 LikelyWinter e \u2227 Agent e x\"\\n\\n\\ntheorem hypothesis:\\n  (* Premise 1: On a snowy day a man with a north face jacket walks through the crowded streets past a garbage truck. *)\\n  assumes asm: \"Man x \u2227 NorthFaceJacket y \u2227 Walking e \u2227 ThroughStreets e \u2227 PastGarbageTruck e \u2227 Agent e x \u2227 Wearing x y \u2227 CrowdedStreets z \u2227 In x z\"\\n  (* Hypothesis: A man walks down the street in winter. *)\\n  shows \"\u2203x e. Man x \u2227 Walking e \u2227 DownStreet e \u2227 LikelyWinter e \u2227 Agent e x\"\\nproof -\\n  (* From the premise, we can extract information about the man walking, wearing a north face jacket, walking through crowded streets, and past a garbage truck. *)\\n  from asm have \"Man x \u2227 Walking e \u2227 ThroughStreets e \u2227 PastGarbageTruck e \u2227 Agent e x \u2227 Wearing x y \u2227 CrowdedStreets z\" <ATP>\\n  (* There is a logical relation Implies(A, B), Implies(the man is walking on a snowy day down a street, it is likely winter) *)\\n  (* A is from explanatory sentence 1, B is from explanatory sentence 1. *)\\n  (* We already have the man walking through streets, so we can infer that he is walking down the street and likely in winter. *)\\n  then have \"Man x \u2227 Walking e \u2227 DownStreet e \u2227 LikelyWinter e \u2227 Agent e x\" <ATP>\\n  then show ?thesis <ATP>\\nqed\\n\\nend\\n', 'logical information': 'Logical Propositions:\\nA: the man is walking on a snowy day down a street\\nB: it is likely winter\\n\\nLogical Relations:\\nImplies(A, B)\\nImplies(the man is walking on a snowy day down a street, it is likely winter)\\n--------\\n\\nDerived Implications:\\n'}"
+        ]
+    }
+}

@@ -1,0 +1,23 @@
+{
+    "id": 5,
+    "premise": "A cute couple at a club",
+    "hypothesis": "The couple is at a club.",
+    "label": "entailment",
+    "explanation": " A cute couple at a club means a couple is at a club.",
+    "results": {
+        "semantic validity": true,
+        "premise": "A cute couple at a club",
+        "hypothesis": "The couple is at a club.",
+        "refined explanation": " A cute couple at a club means a couple is at a club.",
+        "refined iteration": 0,
+        "history explanation": [
+            "0 iteration:  A cute couple at a club means a couple is at a club."
+        ],
+        "history semantic validity": [
+            "0 iteration: True"
+        ],
+        "history critique output": [
+            "0 iteration: {'syntactic validity': True, 'error code': '', 'solving time': 10.355251550674438, 'proof tactics': ['Sledgehammering...', 'cvc4 found a proof...', 'zipperposition found a proof...', 'cvc4 found a proof...', 'vampire found a proof...', 'spass found a proof...', 'e found a proof...', 'verit found a proof...', 'cvc4: Try this: using assms by blast (0.7 ms)', 'cvc4: Found duplicate proof', 'zipperposition: Found duplicate proof', 'verit: Found duplicate proof', 'e: Found duplicate proof', 'spass: Found duplicate proof', 'vampire: Found duplicate proof', 'Done'], 'code': 'theory esnli_5_0\\nimports Main\\n\\nbegin\\n\\ntypedecl entity\\ntypedecl event\\n\\nconsts\\n  Cute :: \"entity \u21d2 bool\"\\n  Couple :: \"entity \u21d2 bool\"\\n  Club :: \"entity \u21d2 bool\"\\n  At :: \"entity \u21d2 entity \u21d2 bool\"\\n\\n(* Explanation 1: A cute couple at a club means a couple is at a club. *)\\naxiomatization where\\n  explanation_1: \"\u2200x y. (Cute x \u2227 Couple x \u2227 Club y \u2227 At x y) \u27f7 (Couple x \u2227 Club y \u2227 At x y)\"\\n\\ntheorem hypothesis:\\n  (* Premise: A cute couple at a club. *)\\n  assumes asm: \"Cute x \u2227 Couple x \u2227 Club y \u2227 At x y\"\\n  (* Hypothesis: The couple is at a club. *)\\n  shows \"\u2203x y. Couple x \u2227 Club y \u2227 At x y\"\\nproof -\\n  (* From the premise, we have the known information about a cute couple at a club. *)\\n  from asm have \"Cute x \u2227 Couple x \u2227 Club y \u2227 At x y\" <ATP>\\n  (* There is a logical relation Implies(A, B), Implies(a cute couple, a couple is at a club) *)\\n  (* A is from explanatory sentence 1, B is from explanatory sentence 1. *)\\n  (* We already have Cute x \u2227 Couple x \u2227 Club y \u2227 At x y, so we can infer Couple x \u2227 Club y \u2227 At x y. *)\\n  then have \"Couple x \u2227 Club y \u2227 At x y\" <ATP>\\n  then show ?thesis <ATP>\\nqed\\n\\nend\\n', 'logical information': 'Logical Propositions:\\nA: a cute couple (from Explanatory Sentence 1)\\nB: a couple is at a club (from Explanatory Sentence 1)\\n\\nLogical Relations:\\nImplies(A, B)\\nImplies(a cute couple, a couple is at a club)\\n--------\\n\\nDerived Implications:\\n'}"
+        ]
+    }
+}

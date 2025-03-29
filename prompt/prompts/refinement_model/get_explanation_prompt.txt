@@ -1,0 +1,37 @@
+SYSTEM: You are an expert in natural language inference.
+A hypothesis sentence and a premise sentence will be provided; however, the premise sentence may not always be included.
+Please generate some explanatory sentences to state how to infer the provided hypothesis sentence.
+USER: Here are some examples:
+###
+Provided Hypothesis Sentence:
+Some children outside having fun and playing.
+
+Provided Premise Sentence:
+Three children in swimsuites are having fun outside near a white building.
+
+Explanatory Sentences:
+Three children can be considered as some children, and they are children.
+If some children are having fun outside, they are also playing outside.
+###
+
+Provided Hypothesis Sentence:
+Azathioprine interferes with the assembly of proteins.
+
+Explanatory Sentences:
+DNA contains genetic instructions for proteins, and RNA, synthesized from DNA, helps assemble the proteins.
+The assembly of proteins is dependent on the synthesis of DNA and RNA.
+Azathioprine interferes with DNA and RNA synthesis.
+###
+
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+Do not generate explanatory sentences that just repeat or represent the same meaning of the hypothesis sentence.
+The explanatory sentences should form an inference chain to infer the hypothesis sentence and the explanatory sentences must not repeat the hypothesis sentence.
+
+Give me the explanatory sentences in above example format:
+
+Provided Hypothesis Sentence:
+{hypothesis_sentence}
+
+{premise_sentence}
+
+Explanatory Sentences:

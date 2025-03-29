@@ -1,0 +1,23 @@
+{
+    "id": 7,
+    "premise": "A policeman is directing a crowd of people walking.",
+    "hypothesis": "A policeman is herding pedestrians.",
+    "label": "entailment",
+    "explanation": " directing a crowd of people is other expression of  herding pedestrians.",
+    "results": {
+        "semantic validity": true,
+        "premise": "A policeman is directing a crowd of people walking.",
+        "hypothesis": "A policeman is herding pedestrians.",
+        "refined explanation": " directing a crowd of people is other expression of  herding pedestrians.",
+        "refined iteration": 0,
+        "history explanation": [
+            "0 iteration:  directing a crowd of people is other expression of  herding pedestrians."
+        ],
+        "history semantic validity": [
+            "0 iteration: True"
+        ],
+        "history critique output": [
+            "0 iteration: {'syntactic validity': True, 'error code': '', 'solving time': 34.360278367996216, 'proof tactics': ['Sledgehammering...', 'cvc4 found a proof...', 'zipperposition found a proof...', 'spass found a proof...', 'cvc4: Try this: using assms explanation_1 by blast (12 ms)', 'vampire found a proof...', 'verit found a proof...', 'zipperposition: Found duplicate proof', 'spass: Found duplicate proof', 'cvc4 found a proof...', 'zipperposition found a proof...', 'verit: Found duplicate proof', 'cvc4: Found duplicate proof', 'zipperposition: Found duplicate proof', 'vampire: Found duplicate proof', 'e found a proof...', 'e: Found duplicate proof', 'Done'], 'code': 'theory esnli_7_0\\nimports Main\\n\\nbegin\\n\\ntypedecl entity\\ntypedecl event\\n\\nconsts\\n  Directing :: \"event \u21d2 bool\"\\n  Crowd :: \"entity \u21d2 bool\"\\n  People :: \"entity \u21d2 bool\"\\n  Herding :: \"event \u21d2 bool\"\\n  Pedestrians :: \"entity \u21d2 bool\"\\n  Agent :: \"event \u21d2 entity \u21d2 bool\"\\n  Patient :: \"event \u21d2 entity \u21d2 bool\"\\n  Policeman :: \"entity \u21d2 bool\"\\n  Walking :: \"entity \u21d2 bool\"\\n\\n(* Explanation 1: Directing a crowd of people is other expression of herding pedestrians. *)\\naxiomatization where\\n  explanation_1: \"\u2200e1 e2 x y. Directing e1 \u2227 Crowd x \u2227 People y \u2227 Herding e2 \u2227 Pedestrians y \u27f7 (Agent e1 x \u2227 Agent e2 x \u2227 Patient e1 y \u2227 Patient e2 y)\"\\n\\ntheorem hypothesis:\\n  (* Premise: A policeman is directing a crowd of people walking. *)\\n  assumes asm: \"Policeman x \u2227 Crowd y \u2227 People z \u2227 Walking z \u2227 Directing e \u2227 Agent e x \u2227 Patient e y \u2227 Patient e z\"\\n  (* Hypothesis: A policeman is herding pedestrians. *)\\n  shows \"\u2203x y e. Policeman x \u2227 Pedestrians y \u2227 Herding e \u2227 Agent e x \u2227 Patient e y\"\\nproof -\\n  (* From the premise, we have the known information about the policeman, crowd, people, and directing event. *)\\n  from asm have \"Policeman x \u2227 Crowd y \u2227 People z \u2227 Directing e \u2227 Agent e x \u2227 Patient e y \u2227 Patient e z\" <ATP>\\n  (* There is a logical equivalence between directing a crowd of people and herding pedestrians. *)\\n  (* Explanation 1 provides this equivalence: Equivalent(A, B), Equivalent(directing a crowd of people, herding pedestrians) *)\\n  (* We can use this equivalence to infer herding pedestrians from directing a crowd of people. *)\\n  then have \"Herding e \u2227 Pedestrians z\" <ATP>\\n  (* Combine the information to show the hypothesis. *)\\n  then have \"Policeman x \u2227 Pedestrians z \u2227 Herding e \u2227 Agent e x \u2227 Patient e z\" <ATP>\\n  then show ?thesis <ATP>\\nqed\\n\\nend\\n', 'logical information': 'Logical Propositions:\\nA: directing a crowd of people (from Explanatory Sentence 1)\\nB: herding pedestrians (from Explanatory Sentence 1)\\n\\nLogical Relations:\\nEquivalent(A, B)\\nEquivalent(directing a crowd of people, herding pedestrians)\\n--------\\n\\nDerived Implications:\\nImplies(Not(A), Not(B))\\nImplies(Not(directing a crowd of people), Not(herding pedestrians))\\n--------\\nImplies(Not(B), Not(A))\\nImplies(Not(herding pedestrians), Not(directing a crowd of people))\\n--------\\nImplies(A, B)\\nImplies(directing a crowd of people, herding pedestrians)\\n--------\\nImplies(B, A)\\nImplies(herding pedestrians, directing a crowd of people)\\n--------\\n'}"
+        ]
+    }
+}

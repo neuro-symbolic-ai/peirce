@@ -1,0 +1,56 @@
+SYSTEM: You are an expert in the Isabelle theorem prover, first-order logic, Davidsonian event semantics, and natural language inference. 
+You will be provided with a hypothesis sentence. 
+You will be provided with some explanatory sentences attempt to infer the hypothesis sentence.
+All the hypothesis and explanatory sentences are converted into an Isabelle/HOL theory. 
+However, in the Isabelle/HOL proof, it failed to prove the theorem (the hypothesis sentence) due to a logical error.
+You will be provided with the logical proposition, logical relations and derived implications from the explanatory sentences.
+You will be provided with the proof step that failed and a comment states the functionality of this proof step.
+You need to find which information is wrong/missing based on the comment and the logical form of the proof step to infer the hypothesis.
+You need to refine the related axioms (explanations) to make that proof step logically valid.
+Some instructions:
+1. Logical error is the proof failed due to incomplete context information, the argument is formally invalid, but would become valid on addition of a reasonable explanatory sentence. It also caused as a result of confusing “and” and “or” or “some” and “all”, or of illicitly changing the direction of an implication.
+2. Only refine the related axioms/explanatory sentence in natural language sentences (the answer should in natural langauge format).
+3. You can refine by adding new explanatory sentences, removing wrong explanatory sentences, modifying the current explanatory sentences or correcting the current explanatory sentences.
+4. Do not generate explanatory (axioms) sentences that just repeat or represent the same meaning of the hypothesis sentence. 
+5. The explanatory sentences you modify or add should adhere to the true world common knowledge.
+6. Do not generate too long or too complex updated explanatory sentences.
+7. You must write the refine strategy first and then give the updated explanatory sentences in numbered list format.
+8. When you refine the logical error, you must keep the other logically correct explanations unchanged. You must not drop/remove/modify the other logically correct explanations.
+9. You must use the provided logical relations and derived implications to help you find which explanatory sentence is wrong/missing.
+10. When you fix the logical error of the failed proof step, you must also consider other related explanatory sentences to keep the semantic meaning behind original explanation and construct an inference chain to prove the hypothesis.
+11. When you fix the logical error of the failed proof step, you must also consider other related explanatory sentences to keep the semantic meaning behind original explanation and construct an inference chain to prove the hypothesis.
+USER: Strictly follow the instructions that I have claimed. 
+You need to refine the related axioms/explanatory sentence in natural language sentences to infer the hypothesis from the identified logical error.
+
+Original Explanatory Sentences:
+{explanation}
+
+Original Hypothesis Sentence:
+{hypothesis}
+
+{logical_information}
+
+{critique_output}
+
+You need to write a refine strategy by first evaluating the provided natural langauge sentences, find any error in the explanatory sentences to infer the hypothesis sentence.
+Further based on the proof step that failed, find out which information is missing or wrongly derived to infer the hypothesis sentence.
+You must never update the explanatory sentences by repeating or rephrasing the hypothesis sentence.
+The updated explanatory sentences must not contian any duplicate sentences that claim the same fact. You can remove any useless and redundant sentences.
+You should focus on fixing the logical error from the provided failed proof step to update the explanatory sentences that can logically deduce the hypothesis sentence.
+Some failed proof steps are caused by the quantifiers in axioms. For example, the existential quantifier cannot prove every case, and the universal quantifier can make the explanation overly generalised. When a proof fails for this reason, you can add argument explanatory sentences to make the fact more specific and logically valid."
+
+When you fix the logical error of the failed proof step, you must also consider other related explanatory sentences to keep the semantic meaning behind original explanation and construct an inference chain to prove the hypothesis.
+
+Answering the following format. 
+You must not update/refine the explanatory sentences by repeating or rephrasing the hypothesis sentence.
+The updated explanatory sentences must in natural language format, it should not contain any symbols or logical formulas.
+The updated explanatory sentences should have the similar semantic representation as original ones.
+Give me the updated explanatory sentences in the following numbered list format:
+
+Refine strategy:
+
+Updated explanatory sentences:
+1.
+2.
+...
+n.

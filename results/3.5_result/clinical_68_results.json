@@ -1,0 +1,23 @@
+{
+    "id": 68,
+    "premise": "none",
+    "hypothesis": "Patient likely has activating PIK3CA mutation, is HER2 negative and HR positive",
+    "label": "entailment",
+    "explanation": "Patient likely has activating mutation of p110\u03b1 subunit of PI3K (PIK3CA).\nPatient is HER2 negative and HR positive.",
+    "results": {
+        "semantic validity": true,
+        "premise": null,
+        "hypothesis": "Patient likely has activating PIK3CA mutation, is HER2 negative and HR positive",
+        "refined explanation": "Patient likely has activating mutation of p110\u03b1 subunit of PI3K (PIK3CA).\nPatient is HER2 negative and HR positive.",
+        "refined iteration": 0,
+        "history explanation": [
+            "0 iteration: Patient likely has activating mutation of p110\u03b1 subunit of PI3K (PIK3CA).\nPatient is HER2 negative and HR positive."
+        ],
+        "history semantic validity": [
+            "0 iteration: True"
+        ],
+        "history critique output": [
+            "0 iteration: {'syntactic validity': True, 'error code': '', 'solving time': 11.531857252120972, 'proof tactics': ['Sledgehammering...', 'zipperposition found a proof...', 'cvc4 found a proof...', 'verit found a proof...', 'e found a proof...', 'vampire found a proof...', 'cvc4 found a proof...', 'verit: Try this: using explanation_1 explanation_2 by blast (1 ms)', 'zipperposition: Found duplicate proof', 'e: Found duplicate proof', 'zipperposition found a proof...', 'cvc4: Try this: by (meson explanation_1 explanation_2) (52 ms)', 'cvc4: Found duplicate proof', 'vampire: Found duplicate proof', 'zipperposition: Found duplicate proof', 'Done'], 'code': 'theory clinical_68_0\\nimports Main\\n\\n\\nbegin\\n\\ntypedecl entity\\ntypedecl event\\n\\nconsts\\n  Patient :: \"entity \u21d2 bool\"\\n  Has :: \"event \u21d2 bool\"\\n  ActivatingMutation :: \"event \u21d2 bool\"\\n  P110\u03b1Subunit :: \"event \u21d2 bool\"\\n  PI3K :: \"event \u21d2 bool\"\\n  PIK3CA :: \"event \u21d2 bool\"\\n  IsHER2Negative :: \"event \u21d2 bool\"\\n  IsHRPositive :: \"event \u21d2 bool\"\\n\\n(* Explanation 1: Patient likely has activating mutation of p110\u03b1 subunit of PI3K (PIK3CA) *)\\naxiomatization where\\n  explanation_1: \"\u2203x e. Patient x \u2227 Has e \u2227 ActivatingMutation e \u2227 P110\u03b1Subunit e \u2227 PI3K e \u2227 PIK3CA e\"\\n\\n(* Explanation 2: Patient is HER2 negative and HR positive *)\\naxiomatization where\\n  explanation_2: \"\u2203x e. Patient x \u2227 IsHER2Negative e \u2227 IsHRPositive e\"\\n\\n\\ntheorem hypothesis:\\n assumes asm: \"Patient x\"\\n  (* Hypothesis: Patient likely has activating PIK3CA mutation, is HER2 negative and HR positive *)\\n shows \"\u2203x e1 e2. Patient x \u2227 Has e1 \u2227 ActivatingMutation e1 \u2227 PIK3CA e1 \u2227 IsHER2Negative e2 \u2227 IsHRPositive e2\"\\nproof -\\n  (* From the premise, we know that the patient has an activating mutation of the p110\u03b1 subunit of PI3K (PIK3CA). *)\\n  from asm and explanation_1 obtain \"\u2203e. Has e \u2227 ActivatingMutation e \u2227 P110\u03b1Subunit e \u2227 PI3K e \u2227 PIK3CA e\" by auto\\n  then obtain e1 where \"Has e1 \u2227 ActivatingMutation e1 \u2227 P110\u03b1Subunit e1 \u2227 PI3K e1 \u2227 PIK3CA e1\" by auto\\n  (* From explanation 2, we know that the patient is HER2 negative and HR positive. *)\\n  from explanation_2 obtain e2 where \"IsHER2Negative e2 \u2227 IsHRPositive e2\" by auto\\n  (* Combining the information, we can conclude that the patient likely has an activating PIK3CA mutation, is HER2 negative, and HR positive. *)\\n  then have \"\u2203e1 e2. Has e1 \u2227 ActivatingMutation e1 \u2227 PIK3CA e1 \u2227 IsHER2Negative e2 \u2227 IsHRPositive e2\" by auto\\n  then show ?thesis by auto\\nqed\\n\\nend\\n', 'logical information': 'Logical Propositions:\\nA: Patient likely has activating mutation of p110\u03b1 subunit of PI3K (PIK3CA)\\nB: Patient is HER2 negative\\nC: Patient is HR positive\\n\\nLogical Relations:\\n\\nDerived Implications:\\n'}"
+        ]
+    }
+}

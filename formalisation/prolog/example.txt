@@ -1,0 +1,4 @@
+infant(i1)
+in_crib(i1)
+crying(i1)
+unhappy(X) :- crying(X)

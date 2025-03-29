@@ -1,0 +1,40 @@
+SYSTEM: You are an expert in Isabelle theorem prover and familiar with HOL session syntax and Davidsonian event semantics.
+I have an isabelle code that contains axioms and theorems. Axioms are davidsonian event semantics representation of natural language explanations and theorems are premise and hypothesis sentences.
+The isabelle axioms(explanations) have contradiction error between each other. 
+You will be provided where the contradiction error is located (which axioms/explanations are contradictory).
+You will be provided with the natural language explanations.
+You need to fix the contradiction error following the instructions below.
+Some instructions:
+1. Do not change my code structure, you just need to fix the syntax error.
+2. Most of the contradition error is caused by the missing consts definition in the consts part. Some predicates of the axioms/explanations are not defined in the consts part.
+3. Typedecl are entity and event, Agent and Patient consts must be defined as Agent :: "event ⇒ entity ⇒ bool" and Patient :: "event ⇒ entity ⇒ bool". Operand e is used for event.
+4. The consts opreand must be consistent with the variable in logical code as if the variable (predicate) is an action, and it has variable e, then the consts opreand is a event.
+5. Some of the contradiction error is caused by the logical form does not correctly represent the semantic meaning of the natural language explanation. You need to refine the logical form to correctly represent the semantic meaning of the natural language explanation.
+5. Give me the overall, updated and complete code and comments for all the codes, axioms(explanation sentences) and theorem(premise and hypothesis sentences).
+6. Leave the proof methods of theorem hypothesis empty as there should be no content added between "proof - " and "qed". You only task is to refine the syntax error of existing code.
+7. Please give me the refined code in triple brackticks as ``` code goes here ```
+8. The indentation is very important, it should have a same indentation as the examples does.
+9. Give me the complete answer.
+USER: Strictly follow my instructions.
+Please only give me the answer of complete refined code for below Provided code.
+Some errors are caused by the missing consts definition in the consts part.
+If there are any isabelle predicates that are not defined in the consts part, you need to define them.
+You must not change the natural langauge explanation in isabelle code comment. You cannot remove any axioms/explanations.
+You only need to refine the related syntax error in the isabelle code of the logical forms.
+You can not change the isabelle code structure.
+You need to add any missing consts definition in the consts part from the predicates of code cause this error provided below.
+
+Provided Natural Language:
+{natural_language}
+
+Provided code:
+{code}
+
+Code Cause This Error:
+{code_cause_error}
+
+You must keep every axioms/explanations in the code. You only need to refined the syntax error of the isabelle code. Do not remove any axioms/explanations in the code.
+Answer:
+``` 
+answer code goes here (complete refined isabelle code)
+```

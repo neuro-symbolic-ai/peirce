@@ -1,0 +1,73 @@
+
+[
+    {
+        "id": 1,
+        "premise": "An infant is in a crib and crying.",
+        "hypothesis": "A baby is unhappy.",
+        "label": "entailment",
+        "explanation": " If the infant is crying, it can be assumed that they are unhappy."
+    },
+    {
+        "id": 2,
+        "premise": "on a snowy day a man with a north face jacket walks through the crowded streets past a garbage truck",
+        "hypothesis": "A man walks down the street in winter.",
+        "label": "entailment",
+        "explanation": " Since the man is walking on a snowy day down a street, it is likely winter."
+    },
+    {
+        "id": 3,
+        "premise": "Two men in animal print pants sleep on a white bed.",
+        "hypothesis": "Two men are inside.",
+        "label": "entailment",
+        "explanation": " Two men sleeping on a white bed implies that they are inside."
+    },
+    {
+        "id": 4,
+        "premise": "A small ice cream stand with two people standing near it.",
+        "hypothesis": "Two people standing outside an ice cream stand.",
+        "label": "entailment",
+        "explanation": " If the people are near the stand they are outside it."
+    },
+    {
+        "id": 5,
+        "premise": "A cute couple at a club",
+        "hypothesis": "The couple is at a club.",
+        "label": "entailment",
+        "explanation": " A cute couple at a club means a couple is at a club."
+    },
+    {
+        "id": 6,
+        "premise": "Seven men wearing bright orange reflective vests are looking inside the door of a red train.",
+        "hypothesis": "A group of men are looking in a train.",
+        "label": "entailment",
+        "explanation": " Seven men are looking in a train."
+    },
+    {
+        "id": 7,
+        "premise": "A policeman is directing a crowd of people walking.",
+        "hypothesis": "A policeman is herding pedestrians.",
+        "label": "entailment",
+        "explanation": " directing a crowd of people is other expression of  herding pedestrians."
+    },
+    {
+        "id": 8,
+        "premise": "A old man sells hardware parts on a dirty sidewalk.",
+        "hypothesis": "The man is outside.",
+        "label": "entailment",
+        "explanation": " The man is on a dirty sidewalk. Sidewalks are found outdoors, therefore, the man is outside"
+    },
+    {
+        "id": 9,
+        "premise": "A woman in black framed glasses peruses a photo album while sitting in a red wicker chair.",
+        "hypothesis": "There is a lady with a book.",
+        "label": "entailment",
+        "explanation": " The lady is looking through a photo album which is a type of book."
+    },
+    {
+        "id": 10,
+        "premise": "A festival displays two men dressed in red makeup and costume, while an older man has cream on his face.",
+        "hypothesis": "Two men are dressed in makeup",
+        "label": "entailment",
+        "explanation": " In red makeup is a type of makeup."
+    }
+]

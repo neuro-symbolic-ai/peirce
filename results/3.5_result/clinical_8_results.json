@@ -1,0 +1,23 @@
+{
+    "id": 8,
+    "premise": "none",
+    "hypothesis": "Inhibiting PARP results in accumulation of single strand breaks.",
+    "label": "entailment",
+    "explanation": "Inhibiting PARP results in accumulation of single strand breaks.\nPARP1 is involved in the recognition and repair of DNA damage in single strand DNA damage repair.",
+    "results": {
+        "semantic validity": true,
+        "premise": null,
+        "hypothesis": "Inhibiting PARP results in accumulation of single strand breaks.",
+        "refined explanation": "Inhibiting PARP results in accumulation of single strand breaks.\nPARP1 is involved in the recognition and repair of DNA damage in single strand DNA damage repair.",
+        "refined iteration": 0,
+        "history explanation": [
+            "0 iteration: Inhibiting PARP results in accumulation of single strand breaks.\nPARP1 is involved in the recognition and repair of DNA damage in single strand DNA damage repair."
+        ],
+        "history semantic validity": [
+            "0 iteration: True"
+        ],
+        "history critique output": [
+            "0 iteration: {'syntactic validity': True, 'error code': '', 'solving time': 13.089671850204468, 'proof tactics': ['Sledgehammering...', 'cvc4 found a proof...', 'zipperposition found a proof...', 'spass found a proof...', 'cvc4 found a proof...', 'cvc4: Try this: by (simp add: assms explanation_1) (0.7 ms)', 'e found a proof...', 'verit found a proof...', 'cvc4: Found duplicate proof', 'vampire found a proof...', 'verit: Try this: using assms explanation_1 by blast (1 ms)', 'spass: Found duplicate proof', 'e: Try this: using assms explanation_1 by presburger (1 ms)', 'zipperposition: Found duplicate proof', 'vampire: Found duplicate proof', 'Done'], 'code': 'theory clinical_8_0\\nimports Main\\n\\n\\nbegin\\n\\ntypedecl entity\\ntypedecl event\\n\\nconsts\\n  InhibitingPARP :: \"event \u21d2 bool\"\\n  AccumulationSingleStrandBreaks :: \"event \u21d2 bool\"\\n  InvolvedInRecognitionRepairDNA :: \"entity \u21d2 event \u21d2 bool\"\\n  InSingleStrandDNADamageRepair :: \"event \u21d2 bool\"\\n  PARP1 :: \"entity\"\\n\\n(* Explanation 1: Inhibiting PARP results in accumulation of single strand breaks *)\\naxiomatization where\\n  explanation_1: \"\u2200e. InhibitingPARP e \u27f6 AccumulationSingleStrandBreaks e\"\\n\\n(* Explanation 2: PARP1 is involved in the recognition and repair of DNA damage in single strand DNA damage repair *)\\naxiomatization where\\n  explanation_2: \"\u2200e. InvolvedInRecognitionRepairDNA PARP1 e \u2227 InSingleStrandDNADamageRepair e\"\\n\\n\\ntheorem hypothesis:\\n assumes asm: \"InhibitingPARP e\"\\n  (* Hypothesis: Inhibiting PARP results in accumulation of single strand breaks *)\\n shows \"AccumulationSingleStrandBreaks e\"\\nproof -\\n  (* From the premise, we know that Inhibiting PARP is true. *)\\n  from asm have \"InhibitingPARP e\" <ATP>\\n  (* There is an explanatory sentence stating that Inhibiting PARP results in accumulation of single strand breaks. *)\\n  (* We can apply the logical relation Implies(A, B), Implies(Inhibiting PARP, accumulation of single strand breaks) *)\\n  then have \"AccumulationSingleStrandBreaks e\" <ATP>\\n  then show ?thesis <ATP>\\nqed\\n\\nend\\n', 'logical information': 'Logical Propositions:\\nA: Inhibiting PARP\\nB: accumulation of single strand breaks\\nC: PARP1 is involved in the recognition and repair of DNA damage\\nD: single strand DNA damage repair\\n\\nLogical Relations:\\nImplies(A, B)\\nImplies(Inhibiting PARP, accumulation of single strand breaks)\\n--------\\nImplies(C, D)\\nImplies(PARP1 is involved in the recognition and repair of DNA damage, single strand DNA damage repair)\\n--------\\n\\nDerived Implications:\\n'}"
+        ]
+    }
+}

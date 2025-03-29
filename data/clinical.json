@@ -1,0 +1,772 @@
+[
+    {
+        "id": 1,
+        "premise": "none",
+        "hypothesis": "There are two potential treatment options for this patient.",
+        "label": "entailment",
+        "explanation": "Olaparib is a PARP1 inhibitor licenced for use in prostate cancer patients.\nRucaparib is a PARP1 inhibitor licenced for use in prostate cancer patients.\nPatients with loss of BRCA2 may benefit from PARP1 inhibition due to synthetic lethality causing cells to rely on a singular mechanism to repair cumulative damage to DNA."
+    },
+    {
+        "id": 2,
+        "premise": "none",
+        "hypothesis": "Patients with loss of BRCA2 may benefit from PARP1 inhibition due to synthetic lethality causing cells to rely on a singular mechanism to repair cumulative damage to DNA.",
+        "label": "entailment",
+        "explanation": "Synthetic lethality is when co-occurrence of multiple genetic events results in cell death.\nPARP inhibitors cause replication‐associated double strand breaks by preventing single strand break repair, relying on defective homologous recombination repair and error prone non-homologous end joining to repair DNA."
+    },
+    {
+        "id": 3,
+        "premise": "none",
+        "hypothesis": "PARP inhibitors cause replication‐associated double strand breaks by preventing single strand break repair, relying on defective homologous recombination repair and error prone non-homologous end joining to repair DNA.",
+        "label": "entailment",
+        "explanation": "loss of BRCA2 causes chromosome breakage.\nInhibition of PARP results in collapsed replication forks and double strand break.\nloss of BRCA2 drives cancer development via genomic instability.\nProposal: Trapping of PARP1 at sites of double strand breaks increases non-homologous end joining and increases toxicity."
+    },
+    {
+        "id": 4,
+        "premise": "none",
+        "hypothesis": "loss of BRCA2 causes chromosome breakage.",
+        "label": "entailment",
+        "explanation": "BRCA2 is a human protein involved in chromosome stability."
+    },
+    {
+        "id": 5,
+        "premise": "none",
+        "hypothesis": "Inhibition of PARP results in collapsed replication forks and double strand break.",
+        "label": "entailment",
+        "explanation": "Inhibiting PARP results in accumulation of single strand breaks.\nsingle strand breaks collapse replication forks and trigger homologous recombination repair."
+    },
+    {
+        "id": 6,
+        "premise": "none",
+        "hypothesis": "loss of BRCA2 drives cancer development via genomic instability.",
+        "label": "entailment",
+        "explanation": "loss of BRCA2 may cause increased genomic instability.\nIncreased genomic instability is a hallmark of cancer."
+    },
+    {
+        "id": 7,
+        "premise": "none",
+        "hypothesis": "BRCA2 is a human protein involved in chromosome stability.",
+        "label": "entailment",
+        "explanation": "BRCA2 is a human gene that encodes the BRCA2 protein.\nBRCA2 protein is a tumour suppressor that is involved in chromosomal stability."
+    },
+    {
+        "id": 8,
+        "premise": "none",
+        "hypothesis": "Inhibiting PARP results in accumulation of single strand breaks.",
+        "label": "entailment",
+        "explanation": "Inhibiting PARP results in accumulation of single strand breaks.\nPARP1 is involved in the recognition and repair of DNA damage in single strand DNA damage repair."
+    },
+    {
+        "id": 9,
+        "premise": "none",
+        "hypothesis": "loss of BRCA2 may cause increased genomic instability.",
+        "label": "entailment",
+        "explanation": "loss of BRCA2 causes the cell to default to non-homologous end joining repair processes.\nnon-homologous end joining does not use a template to repair double strand break and can cause increased genomic instability."
+    },
+    {
+        "id": 10,
+        "premise": "none",
+        "hypothesis": "PARP1 is involved in the recognition and repair of DNA damage in single strand DNA damage repair.",
+        "label": "entailment",
+        "explanation": "PARP1 synthesis PAR which recruits repair proteins to sites of DNA damage.\nPARP1 detects and binds to sites of single strand DNA damage."
+    },
+    {
+        "id": 11,
+        "premise": "none",
+        "hypothesis": "loss of BRCA2 causes the cell to default to non-homologous end joining repair processes.",
+        "label": "entailment",
+        "explanation": "loss of BRCA2 prevents the joining of undamaged repair molecules in homologous recombination repair.\nIn the absence of functional homologous recombination repair genes, DNA repair defaults to non-homologous end joining."
+    },
+    {
+        "id": 12,
+        "premise": "none",
+        "hypothesis": "PARP1 synthesis PAR which recruits repair proteins to sites of DNA damage",
+        "label": "entailment",
+        "explanation": "PARP1 synthesises PAR.\nPAR recruits repair proteins to damaged DNA site."
+    },
+    {
+        "id": 13,
+        "premise": "none",
+        "hypothesis": "loss of BRCA2 prevents the joining of undamaged repair molecules in homologous recombination repair",
+        "label": "entailment",
+        "explanation": "Patient with loss of BRCA2.\nBRCA2 promotes the joining of undamaged homologous repair molecules via RAD51 homolog 1 in humans."
+    },
+    {
+        "id": 14,
+        "premise": "none",
+        "hypothesis": "BRCA2 promotes the joining of undamaged homologous repair molecules via RAD51 homolog 1 in humans.",
+        "label": "entailment",
+        "explanation": "BRCA2 and RAD51 homolog 1 are both involved in homologous recombination repair in humans.\nThe binding of BRCA2 and RAD51 homolog 1 catalyzes the joining of undamaged homologous molecules."
+    },
+    {
+        "id": 15,
+        "premise": "none",
+        "hypothesis": "BRCA2 and RAD51 homolog 1 are both involved in homologous recombination repair in humans.",
+        "label": "entailment",
+        "explanation": "RAD51 is a eukaryotic gene that encodes the RAD51 homolog gene.\nBRCA2 promotes the assembly of RAD51 homolog 1 onto single strand DNA in homologous recombination repair.\nBRCA2 is a human protein involved in double strand break DNA break repair via homologous recombination repair."
+    },
+    {
+        "id": 16,
+        "premise": "none",
+        "hypothesis": "BRCA2 is a human protein involved in double strand break DNA break repair via homologous recombination repair",
+        "label": "entailment",
+        "explanation": "BRCA2 is a human protein involved in homologous recombination repair.\nhomologous recombination repair is a double strand break DNA repair process wherein damaged DNA is replaced by undamaged homologous molecules from sister chromatids or paternal/maternal copies of chromosomes."
+    },
+    {
+        "id": 17,
+        "premise": "none",
+        "hypothesis": "BRCA2 is a human protein involved in homologous recombination repair.",
+        "label": "entailment",
+        "explanation": "BRCA2 is a human gene that encodes the BRCA2 protein.\nBRCA2 protein is a tumour suppressor involved in homologous recombination repair."
+    },
+    {
+        "id": 18,
+        "premise": "none",
+        "hypothesis": "homologous recombination repair is a double strand break DNA repair process wherein damaged DNA is replaced by undamaged homologous molecules from sister chromatids or paternal/maternal copies of chromosomes.",
+        "label": "entailment",
+        "explanation": "homologous recombination repair is the primary process for repairing DNA double strand breaks.\nhomologous recombination repair repairs damage to DNA using information copied from a homologous undamaged molecule.\nUndamaged homologous molecules are provided by sister chromatids or paternal/maternal copies of chromosomes."
+    },
+    {
+        "id": 19,
+        "premise": "none",
+        "hypothesis": "Dasatinib will need to be accessed off licence.",
+        "label": "entailment",
+        "explanation": "Dasatinib is licensed for use in chronic myeloid leukaemia or relapsed acute lymphoblastic leukaemia.\nDasatinib may be effective in treating this patient."
+    },
+    {
+        "id": 20,
+        "premise": "none",
+        "hypothesis": "Dasatinib may be effective in treating this patient.",
+        "label": "entailment",
+        "explanation": "This patient has an activating mutation in CTNNB1.\nDasatinib may be effective in treating CTNNB1 mutations.\nDrugs targeting the Wnt pathway are not available for this patient.\nThis treatment is not available for this patient.\nPatient will have to travel, may not be suitable."
+    },
+    {
+        "id": 21,
+        "premise": "none",
+        "hypothesis": "This patient has an activating mutation in CTNNB1.",
+        "label": "entailment",
+        "explanation": "Patient hepatoblastoma with CTNNB1 W25_H36del.\nCTNNB1 W25_H36del is an activating mutation."
+    },
+    {
+        "id": 22,
+        "premise": "none",
+        "hypothesis": "Dasatinib may be effective in treating CTNNB1 mutations.",
+        "label": "entailment",
+        "explanation": "A YAP inhibitor may be effective in treating patients with activating CTTNB1 mutations.\nDasatinib has been shown to up-regulate phosphorylation of YAP causing increased sequestration into the cytoplasm and decrease binding."
+    },
+    {
+        "id": 23,
+        "premise": "none",
+        "hypothesis": "A YAP inhibitor may be effective in treating patients with activating CTTNB1 mutations.",
+        "label": "entailment",
+        "explanation": "Activating mutations of CTNNB1 promote proliferation of cells via β-catenin.\nA YAP inhibitor may be effective in inhibiting β-catenin activity."
+    },
+    {
+        "id": 24,
+        "premise": "none",
+        "hypothesis": "Activating mutations of CTNNB1 promote proliferation of cells via β-catenin.",
+        "label": "entailment",
+        "explanation": "Activating CTNNB1 mutations result in accumulation of β-catenin.\nβ-catenin activates expression of many genes including cyclin D1 for cell proliferation."
+    },
+    {
+        "id": 25,
+        "premise": "none",
+        "hypothesis": "A YAP inhibitor may be effective in inhibiting β-catenin activity.",
+        "label": "entailment",
+        "explanation": "YAP cooperates with β-catenin to induce Hepatoblastoma development.\nYAP suppression reduces β-catenin levels and inhibits β-catenin dependent growth."
+    },
+    {
+        "id": 26,
+        "premise": "none",
+        "hypothesis": "Drugs targeting the Wnt pathway are not available for this patient.",
+        "label": "entailment",
+        "explanation": "Drugs targeting the Wnt pathway may be effective in this patient.\nCurrently no approved drugs in the Wnt pathway.\nCurrently no clinical trials available to paediatric patients looking at drugs in the Wnt pathway."
+    },
+    {
+        "id": 27,
+        "premise": "none",
+        "hypothesis": "Drugs targeting the Wnt pathway may be effective in this patient.",
+        "label": "entailment",
+        "explanation": "This patient has an activating mutation in CTNNB1.\nDrugs targeting the Wnt pathway may be effective in patients with activating CTNNB1 mutations."
+    },
+    {
+        "id": 28,
+        "premise": "none",
+        "hypothesis": "This patient has an activating mutation in CTNNB1.",
+        "label": "entailment",
+        "explanation": "Patient hepatoblastoma with CTNNB1 W25_H36del.\nCTNNB1 W25_H36del is an activating mutation."
+    },
+    {
+        "id": 29,
+        "premise": "none",
+        "hypothesis": "Drugs targeting the Wnt pathway may be effective in patients with activating CTNNB1 mutations.",
+        "label": "entailment",
+        "explanation": "Inhibiting β-catenin may be effective in treating patients with activating CTTNB1 mutations.\nDrugs targeting the Wnt pathway have shown activity in reducing β-catenin levels."
+    },
+    {
+        "id": 30,
+        "premise": "none",
+        "hypothesis": "Inhibiting β-catenin may be effective in treating patients with activating CTTNB1 mutations.",
+        "label": "entailment",
+        "explanation": "Activating mutations of CTNNB1 promote proliferation of cells via β-catenin."
+    },
+    {
+        "id": 31,
+        "premise": "none",
+        "hypothesis": "Activating mutations of CTNNB1 promote proliferation of cells via β-catenin.",
+        "label": "entailment",
+        "explanation": "β-catenin activates expression of many genes including cyclin D1 for cell proliferation.\nβ-catenin activates expression of many genes including cyclin D1 for cell proliferation."
+    },
+    {
+        "id": 32,
+        "premise": "none",
+        "hypothesis": "This treatment is not available for this patient",
+        "label": "entailment",
+        "explanation": "A Notch inhibitor may be effective in this patient.\nThere are no licenced Notch inhibitors available.\nThere are no Notch inhibitors in clinical trials available for hepatoblastoma patients.\nThere are no Notch inhibitors in clinical trials available for paediatric patients."
+    },
+    {
+        "id": 33,
+        "premise": "none",
+        "hypothesis": "A Notch inhibitor may be effective in this patient.",
+        "label": "entailment",
+        "explanation": "This patient has an activating mutation in CTNNB1.\nA Notch inhibitor may be effective in treating patients with activating CTNNB1 mutations."
+    },
+    {
+        "id": 34,
+        "premise": "none",
+        "hypothesis": "This patient has an activating mutation in CTNNB1.",
+        "label": "entailment",
+        "explanation": "Patient hepatoblastoma with CTNNB1 W25_H36del.\nCTNNB1 W25_H36del is an activating mutation."
+    },
+    {
+        "id": 35,
+        "premise": "none",
+        "hypothesis": "A Notch inhibitor may be effective in treating patients with activating CTNNB1 mutations.",
+        "label": "entailment",
+        "explanation": "Notch inhibitors decrease the level of β-catenin.\nActivating mutations of CTNNB1 promote proliferation of cells via β-catenin.\nThere are Notch inhibitors in development."
+    },
+    {
+        "id": 36,
+        "premise": "none",
+        "hypothesis": "Activating mutations of CTNNB1 promote proliferation of cells via β-catenin.",
+        "label": "entailment",
+        "explanation": "Activating CTNNB1 mutations result in accumulation of β-catenin.\nβ-catenin activates expression of many genes including cyclin D1 for cell proliferation."
+    },
+    {
+        "id": 37,
+        "premise": "none",
+        "hypothesis": "Patient will have to travel, may not be suitable.",
+        "label": "entailment",
+        "explanation": "CFI-402257 may be suitable for this patient.\nCFI-402257study is only in Canada."
+    },
+    {
+        "id": 38,
+        "premise": "none",
+        "hypothesis": "CFI-402257 may be suitable for this patient.",
+        "label": "entailment",
+        "explanation": "A TTK Inhibitor may be effective in this patient.\nCFI-402257 Is a TTK inhibitor in phase 1 studies in patients with Breast cancer and advanced solid tumours."
+    },
+    {
+        "id": 39,
+        "premise": "none",
+        "hypothesis": "A TTK Inhibitor may be effective in this patient.",
+        "label": "entailment",
+        "explanation": "This patient has an activating mutation in CTNNB1.\nTTK inhibitors block the activity of CTNNB1."
+    },
+    {
+        "id": 40,
+        "premise": "none",
+        "hypothesis": "This patient has an activating mutation in CTNNB1.",
+        "label": "entailment",
+        "explanation": "Patient hepatoblastoma with CTNNB1 W25_H36del.\nCTNNB1 W25_H36del is an activating mutation."
+    },
+    {
+        "id": 41,
+        "premise": "none",
+        "hypothesis": "Patient may be eligible for NCT03568656",
+        "label": "entailment",
+        "explanation": "NCT03568656 might be relevant for this patient.\nNCT03568656 is available for patients with advanced solid tumours.\nPatient has soft tissue sarcoma."
+    },
+    {
+        "id": 42,
+        "premise": "none",
+        "hypothesis": "NCT03568656 might be relevant for this patient",
+        "label": "entailment",
+        "explanation": "NCT03568656 targets CREBBP.\nCREBBP/BCORL1 potential role in cancer."
+    },
+    {
+        "id": 43,
+        "premise": "none",
+        "hypothesis": "NCT03568656 targets CREBBP",
+        "label": "entailment",
+        "explanation": "Clinical Trial NCT03568656 has mutation in CBP as eligibility criteria for mutation arm.\nCBP is another name for CREBBP."
+    },
+    {
+        "id": 44,
+        "premise": "none",
+        "hypothesis": "CREBBP/BCORL1 potential role in cancer.",
+        "label": "entailment",
+        "explanation": "CREBBP/ BCORL1 reported in patients with ossifying myxoid tumour.\nUnknown relevance of CREBBP/BCORL1 fusion."
+    },
+    {
+        "id": 45,
+        "premise": "none",
+        "hypothesis": "Unknown relevance of CREBBP/BCORL1 fusion",
+        "label": "entailment",
+        "explanation": "Patient with CREBBP/ BCORL1 fusion.\nUnknown relevance of fusion partner.\nUnknown fusion and breakpoints."
+    },
+    {
+        "id": 46,
+        "premise": "none",
+        "hypothesis": "Patients with loss of PALB2 may benefit from PARP1 inhibition due to synthetic lethality causing cells to rely on a singular mechanism to repair cumulative damage to DNA.",
+        "label": "entailment",
+        "explanation": "PARP inhibitors cause replication‐associated DSBs by preventing SS break repair, relying on defective HRR and error prone NHEJ to repair DNA.\nSynthetic lethality is when co-occurrence of multiple genetic events results in cell death."
+    },
+    {
+        "id": 47,
+        "premise": "none",
+        "hypothesis": "PARP inhibitors cause replication‐associated DSBs by preventing SS break repair, relying on defective HRR and error prone NHEJ to repair DNA.",
+        "label": "entailment",
+        "explanation": "Inhibition of PARP results in collapsed replication forks and DSB.\nLoss of BRCA2 drives cancer development via genomic instability.\nProposal: Trapping of PARP1 at sites of DSBs increases NHEJ and increases toxicity."
+    },
+    {
+        "id": 48,
+        "premise": "none",
+        "hypothesis": "Inhibition of PARP results in collapsed replication forks and DSB.",
+        "label": "entailment",
+        "explanation": "Inhibiting PARP results in accumulation of SS breaks.\nSS breaks collapse replication forks and trigger HRR."
+    },
+    {
+        "id": 49,
+        "premise": "none",
+        "hypothesis": "Loss of BRCA2 drives cancer development via genomic instability.",
+        "label": "entailment",
+        "explanation": "Loss of BRCA2 may cause increased genomic instability.\nIncreased genomic instability is a hallmark of cancer."
+    },
+    {
+        "id": 50,
+        "premise": "none",
+        "hypothesis": "Inhibiting PARP results in accumulation of SS breaks.",
+        "label": "entailment",
+        "explanation": "Inhibiting PARP results in accumulation of SS breaks.\nPARP1 is involved in the recognition and repair of DNA damage in SS DNA damage repair."
+    },
+    {
+        "id": 51,
+        "premise": "none",
+        "hypothesis": "Loss of BRCA2 may cause increased genomic instability.",
+        "label": "entailment",
+        "explanation": "Loss of BRCA2 causes the cell to default to NHEJ repair processes.\nNHEJ does not use a template to repair DSB and can cause increased genomic instability."
+    },
+    {
+        "id": 52,
+        "premise": "none",
+        "hypothesis": "PARP1 is involved in the recognition and repair of DNA damage in SS DNA damage repair.",
+        "label": "entailment",
+        "explanation": "PARP1 synthesis PAR which recruits repair proteins to sites of DNA damage.\nPARP1 detects and binds to sites of SS DNA damage."
+    },
+    {
+        "id": 53,
+        "premise": "none",
+        "hypothesis": "Loss of BRCA2 causes the cell to default to NHEJ repair processes.",
+        "label": "entailment",
+        "explanation": "Loss of PALB2 prevents the action of BRCA2 in joining undamaged repair molecules in HRR.\nIn the absence of functional HRR genes, DNA repair defaults to NHEJ."
+    },
+    {
+        "id": 54,
+        "premise": "none",
+        "hypothesis": "PARP1 detects and binds to sites of SS DNA damage.",
+        "label": "entailment",
+        "explanation": "PARP1 synthesises PAR.\nPAR recruits repair proteins to damaged DNA site."
+    },
+    {
+        "id": 55,
+        "premise": "none",
+        "hypothesis": "Loss of PALB2 prevents the action of BRCA2 in joining undamaged repair molecules in HRR",
+        "label": "entailment",
+        "explanation": "Patient with a pathogenic mutation in PALB2.\nPALB2 encodes a binding partner that localises BRCA2 to sites of DNA damage and links BRCA1 and BRCA2 in HR repair and DNA damage.\nBRCA2 promotes the joining of undamaged homologous repair molecules via RAD51 homolog 1 in humans."
+    },
+    {
+        "id": 56,
+        "premise": "none",
+        "hypothesis": "Patient with a pathogenic mutation in PALB2.",
+        "label": "entailment",
+        "explanation": "Patient with PALB2 c.1592delT mutated Breast Cancer.\nPALB2 c.1592delT is a pathogenic mutation."
+    },
+    {
+        "id": 57,
+        "premise": "none",
+        "hypothesis": "PALB2 encodes a binding partner that localises BRCA2 to sites of DNA damage and links BRCA1 and BRCA2 in HR repair and DNA damage.",
+        "label": "entailment",
+        "explanation": "PALB2 encodes a binding partner of BRCA2 that is required for its localisation to sites of DNA damage.\nPALB2…encodes a major BRCA2 binding partner that links BRCA1 and BRCA2 in HR repair and DNA damage."
+    },
+    {
+        "id": 58,
+        "premise": "none",
+        "hypothesis": "BRCA2 promotes the joining of undamaged homologous repair molecules via RAD51 homolog 1 in humans.",
+        "label": "entailment",
+        "explanation": "BRCA2 and RAD51 homolog 1 are both involved in HRR in humans.\nThe binding of BRCA2 and RAD51 homolog 1 catalyzes the joining of undamaged homologous molecules."
+    },
+    {
+        "id": 59,
+        "premise": "none",
+        "hypothesis": "PALB2 encodes a binding partner of BRCA2 that is required for its localisation to sites of DNA damage.",
+        "label": "entailment",
+        "explanation": "PALB2 is required for the localization of BRCA2 to sites of DNA damage.\nPALB2…encodes a major BRCA2 binding partner that controls its intranuclear localization and stability."
+    },
+    {
+        "id": 60,
+        "premise": "none",
+        "hypothesis": "BRCA2 and RAD51 homolog 1 are both involved in HRR in humans.",
+        "label": "entailment",
+        "explanation": "RAD51 is a eukaryotic gene that encodes the RAD51 homolog gene.\nBRCA2 is a human protein involved in DSB DNA break repair via HRR.\nBRCA2 promotes the assembly of RAD51 homolog 1 onto SS DNA in HRR."
+    },
+    {
+        "id": 61,
+        "premise": "none",
+        "hypothesis": "BRCA2 is a human protein involved in DSB DNA break repair via HRR",
+        "label": "entailment",
+        "explanation": "BRCA2 is a human protein involved in HRR.\nHRR is a DSB DNA repair process wherein damaged DNA is replaced by undamaged homologous molecules from sister chromatids or paternal/maternal copies of chromosomes."
+    },
+    {
+        "id": 62,
+        "premise": "none",
+        "hypothesis": "BRCA2 is a human protein involved in HRR.",
+        "label": "entailment",
+        "explanation": "BRCA2 is a human gene that encodes the BRCA2 protein.\nBRCA2 protein is a tumour suppressor involved in HRR."
+    },
+    {
+        "id": 63,
+        "premise": "none",
+        "hypothesis": "HRR is a DSB DNA repair process wherein damaged DNA is replaced by undamaged homologous molecules from sister chromatids or paternal/maternal copies of chromosomes.",
+        "label": "entailment",
+        "explanation": "HRR is the primary process for repairing DNA double strand breaks.\nHRR repairs damage to DNA using information copied from a homologous undamaged molecule.\nUndamaged homologous molecules are provided by sister chromatids or paternal/maternal copies of chromosomes."
+    },
+    {
+        "id": 64,
+        "premise": "none",
+        "hypothesis": "If patient has previously received endocrine therapy, they may benefit from treatment with alpelisib-fulvestrant to target PIK3CA mutation.",
+        "label": "entailment",
+        "explanation": "Using a kinase inhibitor may target mutations in the PI3K/AKT pathway and inhibit proliferation and survival.\nTreatment with alpelisib–fulvestrant prolonged progression-free survival among patients with PIK3CA-mutated, HR-positive, HER2-negative advanced breast cancer who had received endocrine therapy previously. \nPatient is likely less sensitive to chemotherapy."
+    },
+    {
+        "id": 65,
+        "premise": "none",
+        "hypothesis": "Using a kinase inhibitor may target mutations in the PI3K/AKT pathway and inhibit proliferation and survival.",
+        "label": "entailment",
+        "explanation": "Fully activated Akt mediates numerous cellular functions including proliferation and survival.\nAlpelisib is a kinase inhibitor used in the treatment of certain breast cancers."
+    },
+    {
+        "id": 66,
+        "premise": "none",
+        "hypothesis": "Patient is likely less sensitive to chemotherapy",
+        "label": "entailment",
+        "explanation": "Patient likely has activating PIK3CA mutation, is HER2 negative and HR positive.\nPatients with HR+/Her2- mBC and PIK3CA mutation were less sensitive to chemotherapy and presented worse overall survival."
+    },
+    {
+        "id": 67,
+        "premise": "none",
+        "hypothesis": "Fully activated Akt mediates numerous cellular functions including proliferation and survival.",
+        "label": "entailment",
+        "explanation": "Fully active PKB/Akt mediates numerous cellular functions including angiogenesis, metabolism, growth, proliferation, survival, protein synthesis, transcription, and apoptosis.\nPhosphorylation of bound Akt stimulates full activity of Akt."
+    },
+    {
+        "id": 68,
+        "premise": "none",
+        "hypothesis": "Patient likely has activating PIK3CA mutation, is HER2 negative and HR positive",
+        "label": "entailment",
+        "explanation": "Patient likely has activating mutation of p110α subunit of PI3K (PIK3CA).\nPatient is HER2 negative and HR positive."
+    },
+    {
+        "id": 69,
+        "premise": "none",
+        "hypothesis": "Phosphorylation of bound Akt stimulates full activity of Akt.",
+        "label": "entailment",
+        "explanation": "Phosphorylation of Akt at S473 in the carboxy-terminal hydrophobic motif, either by mTOR or by DNA-PK stimulates full Akt activity. \nPKB/Akt binds to the docking site on PIK3 at the plasma membrane leading to a partial PKB/Akt activation."
+    },
+    {
+        "id": 70,
+        "premise": "none",
+        "hypothesis": "Patient likely has activating mutation of p110α subunit of PI3K (PIK3CA).",
+        "label": "entailment",
+        "explanation": "PI3Ks catalytic subunit p110, of which p110α is transcribed from the PIK3CA gene.\nActivating mutations of the p110α subunit of PI3K (PIK3CA) have been identified in a broad spectrum of tumors.\nPatient has an activating PIK3Ca mutation which is seen frequently in breast cancer."
+    },
+    {
+        "id": 71,
+        "premise": "none",
+        "hypothesis": "PKB/Akt binds to the docking site on PIK3 at the plasma membrane leading to a partial PKB/Akt activation",
+        "label": "entailment",
+        "explanation": "The conversion of PIP2 to PIP3 provides mediates recruitment of PI3K to the plasma membrane and provides a docking site for PDK1 and AKT.\nPKB/Akt binds to PIP3 at the plasma membrane, allowing PDK1 to access and phosphorylate T308 in the “activation loop,” leading to partial PKB/Akt activation."
+    },
+    {
+        "id": 72,
+        "premise": "none",
+        "hypothesis": "PI3Ks catalytic subunit p110, of which p110α is transcribed from the PIK3CA gene.",
+        "label": "entailment",
+        "explanation": "PI3Ks are a family of lipids comprised of a catalytic (p100) and regulatory (p85) subunit.\nThere are three different isoforms of the p110 subunit in mammals.\np110α…  transcribed from the genes PIK3CA."
+    },
+    {
+        "id": 73,
+        "premise": "none",
+        "hypothesis": "Patient has an activating PIK3Ca mutation which is seen frequently in breast cancer",
+        "label": "entailment",
+        "explanation": "Patient with activating PIK3CA A3140G mutated metastatic Breast Cancer.\nPIK3Ca is a known and frequent activating mutation in breast cancer."
+    },
+    {
+        "id": 74,
+        "premise": "none",
+        "hypothesis": "The conversion of PIP2 to PIP3 provides mediates recruitment of PI3K to the plasma membrane and provides a docking site for PDK1 and AKT",
+        "label": "entailment",
+        "explanation": "The p110 subunit of PIK3 catalyses the conversion of PIP2 to PIP3 and mediates recruitment of PI3K to plasma membrane.\nPIP2 to PIP3… subsequently provides a docking site for the pleckstrin homology domain-containing proteins PDK1 and AKT."
+    },
+    {
+        "id": 75,
+        "premise": "none",
+        "hypothesis": "PIK3Ca is a known and frequent activating mutation in breast cancer",
+        "label": "entailment",
+        "explanation": " The best known genetic alterations of this pathway are… activating point mutations at PI3K.\nIn breast cancer, mutations of the PIK3CA gene… are highly frequent."
+    },
+    {
+        "id": 76,
+        "premise": "none",
+        "hypothesis": "The p110 subunit of PIK3 catalyses the conversion of PIP2 to PIP3 and mediates recruitment of PI3K to plasma membrane",
+        "label": "entailment",
+        "explanation": "Binding of the p85 subunit and p110 relieves inhibition of p110 and mediates the recruitment of PI3K to the plasma membrane.\nThe activated p110 subunit catalyses the conversion of phosphatidylinositol-4,5-bisphosphate (PIP2) to phosphatidylinositol-4,5-trisphosphate (PIP3)."
+    },
+    {
+        "id": 77,
+        "premise": "none",
+        "hypothesis": "Binding of the p85 subunit and p110 relieves inhibition of p110 and mediates the recruitment of PI3K to the plasma membrane",
+        "label": "entailment",
+        "explanation": "Upon growth factor stimulation p85 binds… and mediating the recruitment of PI3K to the plasma membrane.\nBinding of the catalytic subunit (p110) of PI3K by the regulatory subunit (p85) relieves the inhibitory effect on p110."
+    },
+    {
+        "id": 78,
+        "premise": "none",
+        "hypothesis": "Binding of the catalytic subunit (p110) of PI3K by the regulatory subunit (p85) relieves the inhibitory effect on p110.",
+        "label": "entailment",
+        "explanation": "Upon growth factor stimulation p85 binds… relieving its inhibitory effect over p110.\nPI3Ks… are heterodimers consisting of a catalytic (p110) and a regulatory (p85) subunit.\nPhosphoinositide 3-kinases (PI3Ks) comprise a family of lipid kinases."
+    },
+    {
+        "id": 79,
+        "premise": "none",
+        "hypothesis": "Patient may benefit from combination vemurafenib and chemotherapy.",
+        "label": "entailment",
+        "explanation": "Patient with TNBC not appropriate for immunotherapy or PARP inhibitors as second line therapy.\nCombination vemurafenib and MEK inhibitor unavailable for patient.\nThe combination of vemurafenib, carboplatin, and paclitaxel is well tolerated and demonstrates encouraging activity, predominantly in patients with advanced melanoma and BRAFV600 mutations irrespective of prior treatment with BRAF and/or MEK inhibitors."
+    },
+    {
+        "id": 80,
+        "premise": "none",
+        "hypothesis": "Patient with TNBC not appropriate for immunotherapy or PARP inhibitors as second line therapy.",
+        "label": "entailment",
+        "explanation": "Patient to be considered for second-line treatment.\nUnknown whether patient will be appropriate for immune checkpoint inhibitors.\nPARP inhibitors not appropriate for this patient."
+    },
+    {
+        "id": 81,
+        "premise": "none",
+        "hypothesis": "Patient to be considered for second-line treatment",
+        "label": "entailment",
+        "explanation": "Patient now has progressive disease.\nPatient with TNBC had stable disease after first-line treatment with chemotherapy."
+    },
+    {
+        "id": 82,
+        "premise": "none",
+        "hypothesis": "Patient with TNBC had stable disease after first-line treatment with chemotherapy.",
+        "label": "entailment",
+        "explanation": "Patient has received first-line chemotherapy.\nthe best response [of first-line therapy] was stable disease."
+    },
+    {
+        "id": 83,
+        "premise": "none",
+        "hypothesis": "Patient has received first-line chemotherapy.",
+        "label": "entailment",
+        "explanation": "Patient has received vinorelbine and cisplatin as first-line treatment.\nVinorelbine and cisplatin is a chemotherapy treatment.\nPatient should be treated with chemotherapy."
+    },
+    {
+        "id": 84,
+        "premise": "none",
+        "hypothesis": "Patient should be treated with chemotherapy",
+        "label": "entailment",
+        "explanation": "Patient has breast cancer that has no expression of ER, PR or HER 2.\nthe primary method for systemic management of both early-stage and metastatic settings is chemotherapy, which improves outcomes in TNBC."
+    },
+    {
+        "id": 85,
+        "premise": "none",
+        "hypothesis": "Patient has breast cancer that has no expression of ER, PR or HER 2",
+        "label": "entailment",
+        "explanation": "Patient with Triple Negative Breast Cancer.\nTNBC is a heterogeneous group of tumors comprising various breast cancers (BCs) defined as the absence of [ER and PR] with corresponding negativity for [...] HER-2."
+    },
+    {
+        "id": 86,
+        "premise": "none",
+        "hypothesis": "Unknown whether patient will be appropriate for immune checkpoint inhibitors",
+        "label": "entailment",
+        "explanation": "Patient PD-L1 status unknown.\nImmune checkpoint inhibitors have had promising outcomes in TNBC."
+    },
+    {
+        "id": 87,
+        "premise": "none",
+        "hypothesis": "Immune checkpoint inhibitors have had promising outcomes in TNBC",
+        "label": "entailment",
+        "explanation": "PD-1 inhibitors and PD-L1 inhibitors are a group of checkpoint inhibitor anticancer drugs.\nanti-programmed death 1 (PD-1)/programmed death-ligand 1 (PD-L1) drugs have started to make progress in triple-negative breast cancer (TNBC) with promising outcomes both in the early and the metastatic setting."
+    },
+    {
+        "id": 88,
+        "premise": "none",
+        "hypothesis": "PARP inhibitors not appropriate for this patient.",
+        "label": "entailment",
+        "explanation": "Patient does not have BRCA mutation.\nOlaparib and talazoparib are licensed PARP inhibitors for the treatment of patients with BRCA-mutated, HER-2-negative advanced or metastatic BC."
+    },
+    {
+        "id": 89,
+        "premise": "none",
+        "hypothesis": "Olaparib and talazoparib are licensed PARP inhibitors for the treatment of patients with BRCA-mutated, HER-2-negative advanced or metastatic BC",
+        "label": "entailment",
+        "explanation": "US Food and Drug Administration approved olaparib and talazoparib for the treatment of patients with BRCA-mutated, HER-2-negative advanced or metastatic BC.\nOlaparib and talazoparib are licensed PARP inhibitors, which target tumour specific defects in DNA repair."
+    },
+    {
+        "id": 90,
+        "premise": "none",
+        "hypothesis": "Olaparib and talazoparib are licensed PARP inhibitors, which target tumour specific defects in DNA repair.",
+        "label": "entailment",
+        "explanation": "[PARP1/2] inhibitors target tumour-specific defects in DNA repair through the role of PARP1/2 in recover from DNA damage.\nolaparib and talazoparib are licensed poly [ADP-ribose] polymerase 1/2 inhibitors."
+    },
+    {
+        "id": 91,
+        "premise": "none",
+        "hypothesis": "[PARP1/2] inhibitors target tumour-specific defects in DNA repair through the role of PARP1/2 in recover from DNA damage",
+        "label": "entailment",
+        "explanation": "[PARP1/2] inhibitors are a class of anticancer agents that target tumor-specific defects in DNA repair.\nPARP1 and PARP2 are both involved in polyADP-ribosylation which is important in processes including recovery from DNA damage."
+    },
+    {
+        "id": 92,
+        "premise": "none",
+        "hypothesis": "PARP1 and PARP2 are both involved in polyADP-ribosylation which is important in processes including recovery from DNA damage.",
+        "label": "entailment",
+        "explanation": "[PARP2] encodes poly(ADP-ribosyl)transferase-like 2 protein, which contains a catalytic domain [...] capable of catalyzing a poly(ADP-ribosyl)ation reaction.\nPARP1 is a polyADP-ribosyl transferse which, via polyADP-riosylation, modifies nuclear proteins involved in important cellular processes including recovery from DNA damage."
+    },
+    {
+        "id": 93,
+        "premise": "none",
+        "hypothesis": "PARP1 is a polyADP-ribosyl transferse which, via polyADP-riosylation, modifies nuclear proteins involved in important cellular processes including recovery from DNA damage.",
+        "label": "entailment",
+        "explanation": "[PARP1 is a ]poly(ADP-ribosyl)transferase, which modifies various nuclear proteins by poly(ADP-ribosyl)ation.\nPoly(ADP-ribosyl)ation… is dependent on DNA and is involved in the regulation of various important cellular processes such as differentiation, proliferation, and tumor transformation….\nPoly(ADP-ribosyl)ation… is involved in… the regulation of the molecular events involved in the recovery of cell from DNA damage."
+    },
+    {
+        "id": 94,
+        "premise": "none",
+        "hypothesis": "Combination vemurafenib and MEK inhibitor unavailable for patient.",
+        "label": "entailment",
+        "explanation": "MEK inhibitors unavailable in patients country.\nCombination of vemurafenib and a MEK inhibitor may yield better results than vemurafenib monotherapy."
+    },
+    {
+        "id": 95,
+        "premise": "none",
+        "hypothesis": "Combination of vemurafenib and a MEK inhibitor may yield better results than vemurafenib monotherapy.",
+        "label": "entailment",
+        "explanation": "Patient could receive treatment with vemurafenib for V600E mutation.\nrapid recovery of MAPK pathway signaling was associated with resistance to BRAF inhibitors."
+    },
+    {
+        "id": 96,
+        "premise": "none",
+        "hypothesis": "Patient could receive treatment with vemurafenib for V600E mutation",
+        "label": "entailment",
+        "explanation": "Patient has common BRAF V600E mutation.\nvemurafenib is a low-molecular-weight, orally available inhibitor which selectively binds to the ATPbinding site of BRAF V600E kinase and inhibits its activity."
+    },
+    {
+        "id": 97,
+        "premise": "none",
+        "hypothesis": "Patient has common BRAF V600E mutation",
+        "label": "entailment",
+        "explanation": "Patient has BRAF V600E mutation… acquired new mutations and AR amplification.\nBRAF V600E is the most common BRAF mutation and results in constitutive hyperactivation and oncogenic transformation."
+    },
+    {
+        "id": 98,
+        "premise": "none",
+        "hypothesis": "BRAF V600E is the most common BRAF mutation and results in constitutive hyperactivation and oncogenic transformation.",
+        "label": "entailment",
+        "explanation": "the most common mutation locus is found in codon 600 of exon 15 (V600E) of the BRAF gene.\nA mutation in BRAF affects cell division, differentiation and secretion.\nBRAF mutV600E [causes] constitutive hyperactivation, proliferation, differentiation, survival, and oncogenic transformation."
+    },
+    {
+        "id": 99,
+        "premise": "none",
+        "hypothesis": "A mutation in BRAF affects cell division, differentiation and secretion.",
+        "label": "entailment",
+        "explanation": "Through its regulation of MAPK/ERK, BRAF plays a role in cell division, differentiation and secretion.\nA BRAF mutation is a spontaneous change in the BRAF gene that… causes the gene to turn on the protein and keep it on."
+    },
+    {
+        "id": 100,
+        "premise": "none",
+        "hypothesis": "Through its regulation of MAPK/ERK, BRAF plays a role in cell division, differentiation and secretion.",
+        "label": "entailment",
+        "explanation": "BRAF is a proto-oncogene that plays important roles in regulating the MAPK/ERK signaling pathway.\nthe MAP kinase/ERK signaling pathway [...] affects cell division, differentiation, and secretion."
+    },
+    {
+        "id": 101,
+        "premise": "none",
+        "hypothesis": "BRAF is a proto-oncogene that plays important roles in regulating the MAPK/ERK signaling pathway",
+        "label": "entailment",
+        "explanation": "the B-Raf proto-oncogene (BRAF) is a RAS-regulated cytoplasmic serine-threonine kinase.\nBRAF plays important roles in regulating the MAPK/ERK signaling pathway."
+    },
+    {
+        "id": 102,
+        "premise": "none",
+        "hypothesis": "Patient may benefit from treatment with Neratinib or Lapatinib or may able to access a clinical trial for treatment of ERBB2 V777L",
+        "label": "entailment",
+        "explanation": "Lapatinib and neratinib bind to the HER2 kinase domain and are therefore expected to have efficacy against tumours with these mutations in the kinase domain.\nan irreversible inhibitor that is targeted to the HER2 kinase domain may overcome treatment resistance and be effective in breast cancer patients.\nERBB2 V777L is an inclusion criterion in 4 clinical trials for breast carcinoma, of which 4 are open and 0 are closed. Of the trials that contain ERBB2 V777L and breast carcinoma as inclusion criteria, 1 is phase 1/phase 2 (1 open) and 3 are phase 2 (3 open)."
+    },
+    {
+        "id": 103,
+        "premise": "none",
+        "hypothesis": "an irreversible inhibitor that is targeted to the HER2 kinase domain may overcome treatment resistance and be effective in breast cancer patients",
+        "label": "entailment",
+        "explanation": "an irreversible inhibitor that is targeted to the HER2 kinase domain is expected to be an effective drug for breast cancer patients.\nTargeting the HER V777L mutation with an irreversible tyrosine kinase inhibitor may overcome treatment resistance."
+    },
+    {
+        "id": 104,
+        "premise": "none",
+        "hypothesis": "Targeting the HER V777L mutation with an irreversible tyrosine kinase inhibitor may overcome treatment resistance.",
+        "label": "entailment",
+        "explanation": "an irreversible inhibitor that is targeted to the HER2 kinase domain… should overcome trastuzumab resistance that has been induced by a HER2-activating mutation.\nHER2 V777L may cause resistance to  trastuzumab, as trastuzumab binds to the extracellular kinase domain, whereas the mutation is in the intracellular kinase domain."
+    },
+    {
+        "id": 105,
+        "premise": "none",
+        "hypothesis": "HER2 V777L may cause resistance to  trastuzumab, as trastuzumab binds to the extracellular kinase domain, whereas the mutation is in the intracellular kinase domain.",
+        "label": "entailment",
+        "explanation": "Because trastuzumab binds to the HER2 extracellular domain, it may have no inhibitory effect on the HER2- activating mutation in the intracellular kinase domain.\nThe HER2 V777L mutation is located in the tyrosine kinase domain.\nHER2 V777L may cause resistance to antibody therapy."
+    },
+    {
+        "id": 106,
+        "premise": "none",
+        "hypothesis": "HER2 V777L may cause resistance to antibody therapy",
+        "label": "entailment",
+        "explanation": "HER2 V777L is coincident with HER2-amplification in breast cancers that have developed trastuzumab resistance.\nThis patient may develop resistance to Trastuzumab therapy."
+    },
+    {
+        "id": 107,
+        "premise": "none",
+        "hypothesis": "This patient may develop resistance to Trastuzumab therapy.",
+        "label": "entailment",
+        "explanation": "overexpression of a HER2 V777L mutation resulted in trastuzumab resistance by a soft-agar colony formation assay of a colorectal cancer cell line.\nA portion of tumours, however, ultimately develop resistance to anti-HER2 antibody therapy.\nPatient may benefit from treatment with Trastuzumab."
+    },
+    {
+        "id": 108,
+        "premise": "none",
+        "hypothesis": "Patient may benefit from treatment with Trastuzumab",
+        "label": "entailment",
+        "explanation": "With the development of a humanized monoclonal antibody that targets the HER2 receptor, trastuzumab, the prognosis for HER2+ breast cancer patients has dramatically improved.\nPatient has V777L HER 2 mutated and HER 2 amplified breast cancer."
+    },
+    {
+        "id": 109,
+        "premise": "none",
+        "hypothesis": "Patient has V777L HER 2 mutated and HER 2 amplified breast cancer",
+        "label": "entailment",
+        "explanation": "Patient with HER2+ breast cancer.\nPatient has a known V777L HER 2 mutation."
+    },
+    {
+        "id": 110,
+        "premise": "none",
+        "hypothesis": "Patient has a known V777L HER 2 mutation",
+        "label": "entailment",
+        "explanation": "Patient has V777L HER 2 mutation.\nERBB2 is altered in 13.78% of breast carcinoma patients with ERBB2 V777L present in 0.41% of all breast carcinoma patients."
+    }
+]

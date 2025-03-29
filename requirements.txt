@@ -1,0 +1,15 @@
+pyswip==0.2.2
+isabelle-client
+argparse
+pathlib
+openai
+tenacity
+python-dotenv
+rank_bm25
+sskb
+datasets
+spacy
+certainty-estimator
+sentence_transformers
+sympy
+accelerate
