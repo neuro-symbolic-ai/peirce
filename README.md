@@ -4,16 +4,17 @@ A persistent challenge in AI is the effective integration of material and formal
 
 High-level overview of the framework:
 
+![Image description](framework.png)
+
 ## Demonstrations
 
 To get you familiar with PEIRCE, we released a list of demonstrations showcasing the applicability of the framework to different NLI tasks and domains:
 
-- Explanation Retrieval and Explanatory Unification Patterns, [link](https://github.com/neuro-symbolic-ai/peirce/blob/main/Explanation%20Retrieval.ipynb).
+- Refinement with hard and soft critiques, [link](https://github.com/neuro-symbolic-ai/peirce/blob/main/Soft%20and%20Hard%20Critiques.ipynb)
 - LLMs-Symbolic Explanation Refinement (with hard Isabelle critique), [link](https://github.com/neuro-symbolic-ai/peirce/blob/main/Neuro-Symbolic%20Explanation%20Refinement.ipynb)
 - Inference to the Best Explanation in Large Language Models (with soft critiques), [link](https://github.com/neuro-symbolic-ai/peirce/blob/main/Inference%20to%20the%20Best%20Explanation.ipynb)
-- Hybrid Inductive Logic Programming (with hard Prolog critique), [link](https://github.com/neuro-symbolic-ai/peirce/blob/main/Inference%20to%20the%20Best%20Explanation.ipynb)
-- Refinement with hard and soft critiques, [link](https://github.com/neuro-symbolic-ai/peirce/blob/main/Inference%20to%20the%20Best%20Explanation.ipynb)
-
+- Hybrid Inductive Logic Programming (with hard Prolog critique), [link](https://github.com/neuro-symbolic-ai/peirce/blob/main/Hybrid%20Inductive%20Logic%20Programming.ipynb)
+- Explanation Retrieval and Explanatory Unification Patterns, [link](https://github.com/neuro-symbolic-ai/peirce/blob/main/Explanation%20Retrieval.ipynb).
 
 ## Install Dependencies
 
