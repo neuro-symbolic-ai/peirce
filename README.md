@@ -18,7 +18,7 @@ To get you familiar with PEIRCE, we released a list of demonstrations showcasing
 
 ## Install Dependencies
 
-#### Python Libraries
+### Python Libraries
 
 To install all the required Python libraries for running PEIRCE, clone the repository locally and execute the following command:
 
