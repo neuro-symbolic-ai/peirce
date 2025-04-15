@@ -95,7 +95,7 @@ Set your `api_key` in the `config.yaml` file to use the generative models.
 
 If you find this repository useful, please consider citing our demo paper. 
 
-'''
+```
 @misc{quan2025peirceunifyingmaterialformal,
       title={PEIRCE: Unifying Material and Formal Reasoning via LLM-Driven Neuro-Symbolic Refinement}, 
       author={Xin Quan and Marco Valentino and Danilo S. Carvalho and Dhairya Dalal and André Freitas},
@@ -105,5 +105,5 @@ If you find this repository useful, please consider citing our demo paper.
       primaryClass={cs.AI},
       url={https://arxiv.org/abs/2504.04110}, 
 }
-'''
+```
 
