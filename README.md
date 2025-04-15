@@ -12,7 +12,7 @@ High-level overview of the framework:
 
 ## Demonstrations
 
-To get you familiar with PEIRCE, we released a list of demonstrations showcasing the applicability of the framework to different NLI tasks and domains:
+To get you familiar with PEIRCE, we released a set of demonstrations showcasing the applicability of the framework to different NLI tasks and domains:
 
 - Refinement with hard and soft critiques, [link](https://github.com/neuro-symbolic-ai/peirce/blob/main/Soft%20and%20Hard%20Critiques.ipynb)
 - LLMs-Symbolic Explanation Refinement (with hard Isabelle critique), [link](https://github.com/neuro-symbolic-ai/peirce/blob/main/Neuro-Symbolic%20Explanation%20Refinement.ipynb)
