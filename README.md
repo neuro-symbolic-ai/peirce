@@ -91,7 +91,7 @@ print(os.environ['PATH'])
 #### API Keys
 Set your `api_key` in the `config.yaml` file to use the generative models.
 
-## Bibtex
+## Reference
 
 If you find this repository useful, please consider citing our demo paper. 
 
