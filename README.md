@@ -1,9 +1,9 @@
-# PEIRCE: Unifying Material and Formal Reasoning via LLM-Driven Neuro-Symbolic Refinement
+# PEIRCE: Unifying Material and Formal Reasoning via LLM-Driven Neuro-Symbolic Refinement (ACL 2025)
 
 A persistent challenge in AI is the effective integration of material and formal inference - the former concerning the plausibility and contextual relevance of arguments, while the latter focusing on their logical and structural validity. Large Language Models (LLMs), by virtue of their extensive pre-training on large textual corpora, exhibit strong capabilities in material inference. However, their reasoning often lacks formal rigour and verifiability. At the same time, LLMs’ linguistic competence positions them as a promising bridge between natural and formal languages, opening up new opportunities for combining these two modes of reasoning. We introduce PEIRCE, a neuro-symbolic framework designed to unify material and formal inference through an iterative conjecture–criticism process. Within this framework, LLMs play the central role of generating candidate solutions in natural and formal languages, which are then evaluated and refined via interaction with external critique models. These critiques include symbolic provers, which assess formal validity, as well as soft evaluators that measure the quality of the generated arguments along linguistic and epistemic dimensions such as plausibility, coherence, and parsimony. While PEIRCE is a general-purpose framework, we demonstrate its capabilities in the domain of natural language explanation generation - a setting that inherently demands both material adequacy and formal correctness
 
 
-Demo paper: https://arxiv.org/abs/2504.04110 
+ACL 2025 Demo paper: https://aclanthology.org/2025.acl-demo.2/
 
 High-level overview of the framework:
 
@@ -100,14 +100,25 @@ Set your `api_key` in the `config.yaml` file to use the generative models.
 If you find this repository useful, please consider citing our demo paper. 
 
 ```
-@misc{quan2025peirceunifyingmaterialformal,
-      title={PEIRCE: Unifying Material and Formal Reasoning via LLM-Driven Neuro-Symbolic Refinement}, 
-      author={Xin Quan and Marco Valentino and Danilo S. Carvalho and Dhairya Dalal and André Freitas},
-      year={2025},
-      eprint={2504.04110},
-      archivePrefix={arXiv},
-      primaryClass={cs.AI},
-      url={https://arxiv.org/abs/2504.04110}, 
+@inproceedings{quan-etal-2025-peirce,
+    title = "{PEIRCE}: Unifying Material and Formal Reasoning via {LLM}-Driven Neuro-Symbolic Refinement",
+    author = "Quan, Xin  and
+      Valentino, Marco  and
+      Carvalho, Danilo  and
+      Dalal, Dhairya  and
+      Freitas, Andre",
+    editor = "Mishra, Pushkar  and
+      Muresan, Smaranda  and
+      Yu, Tao",
+    booktitle = "Proceedings of the 63rd Annual Meeting of the Association for Computational Linguistics (Volume 3: System Demonstrations)",
+    month = jul,
+    year = "2025",
+    address = "Vienna, Austria",
+    publisher = "Association for Computational Linguistics",
+    url = "https://aclanthology.org/2025.acl-demo.2/",
+    doi = "10.18653/v1/2025.acl-demo.2",
+    pages = "11--21",
+    ISBN = "979-8-89176-253-4"
 }
 ```
 
